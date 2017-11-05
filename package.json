@@ -1,0 +1,21 @@
+{
+    "name": "vscode-coldbox",
+    "displayName": "vscode-coldbox",
+    "description": "ColdBox Platform Visual Studio Code IDE Package",
+    "version": "0.0.1",
+    "publisher": "ilich8086",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lang-cfml",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
