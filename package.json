@@ -1,8 +1,8 @@
 {
     "name": "vscode-coldbox",
     "displayName": "vscode-coldbox",
-    "description": "ColdBox Platform Visual Studio Code IDE Package",
-    "version": "0.0.1",
+    "description": "ColdBox Platform Support for Visual Studio Code",
+    "version": "0.1.0",
     "publisher": "ilich8086",
     "engines": {
         "vscode": "^1.17.0"
@@ -17,5 +17,12 @@
                 "path": "./snippets/snippets.json"
             }
         ]
-    }
+    },
+    "keywords": [
+        "CFML",
+        "ColdFusion",
+        "Lucee",
+        "ColdBox"
+    ],
+    "dependencies": {}
 }
