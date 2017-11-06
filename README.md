@@ -1,65 +1,80 @@
-# vscode-coldbox README
+# A ColdBox Platform Bundle v2.0.0 for Visual Studio Code
 
-This is the README for your extension "vscode-coldbox". After writing up a brief description, we recommend including the following sections.
+Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
-## Features
+## Target Platforms
+- ColdBox 4.X.X
+- TestBox 2.X.X
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Currently supported features
 
-For example if there is an image subfolder under your extension project workspace:
+This bundle includes functionality not only for ColdBox MVC, but also for WireBox, CacheBox and LogBox.
 
-\!\[feature X\]\(images/feature-x.png\)
+### Code Insight
+Code completion for all major ColdBox + TestBox functions and scopes:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- `binder ➝` : "coldbox.system.ioc.config.Binder",
+- `cachebox ➝` : "coldbox.system.cache.CacheFactory"
+- `controller ➝` : "coldbox.system.web.Controller",
+- `event ➝` : "coldbox.system.web.context.RequestContext",
+- `flash ➝` : "coldbox.system.web.flash.AbstractFlashScope",
+- `html ➝` : "coldbox.system.core.dynamic.HTMLHelper"
+- `log ➝` : "coldbox.system.logging.Logger",
+- `logbox ➝` : "coldbox.system.logging.LogBox",
+- `wirebox ➝` : "coldbox.system.ioc.Injector",
+- `$assert` : "testbox.system.Assertion"
 
-## Requirements
+### Code Skeleton Snippets
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- `cachebox-config ➝` : Creates a new CacheBox.cfc configuration file
+- `config ➝` : Creates a new ColdBox.cfc configuration file
+- `box ➝` : Creates a `box.json` template
+- `handler ➝` : Creates a ColdBox Event Handler
+- `interceptor ➝` : Creates a ColdBox Interceptor
+- `model ➝` : Creates a model object
+- `routes ➝` : Creates a new routing file
+- `point ➝` : Creates a new interception point method
+- `cfc ➝` : Creates a new ColdFusion script CFC
+- `function ➝` : Creates a new ColdFusion script function
+- `inject ➝` : Creates a new property with an `inject` annotation for WireBox
+- `property ➝` : Creates a new ColdFusion script property
 
-## Extension Settings
+### Handler Code Snippets
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- `action ➝` : Creates a handler action
+- `around` : Creates an *aroundHandler()* implicit action
+- `onerror ➝` : Creates an *onError()* implicit action 
+- `onhttp ➝` : Creates an *onInvalidHTTPMethod()* implict action
+- `onma ➝` : Creates an *onMissingAction()* implicit action 
+- `postaction ➝` : Creates a *postXXX()* implicit action 
+- `post ➝` : Creates a *postHandler()* implicit action 
+- `preaction ➝` : Creates a *preXXX()* implicit action 
+- `pre ➝` : Creates a *preHandler()* implicit action 
 
-For example:
+### ORM Code Snippets
 
-This extension contributes the following settings:
+- `active ➝` : Creates a ColdBox Active Entity
+- `entity ➝` : Creates an ORM Entity
+- `ormservice ➝` : Creates a Base ORM service
+- `virtualservice ➝` : Creates a virtual entity service
+- `o2m` : Creates a one-to-many property definition
+- `m2o` : Creates a many-to-one property definition
+- `m2m` : Creates a many-to-many property definition
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### WireBox Code Snippets
 
-## Known Issues
+- `aspect ➝` : Creates a WireBox AOP Aspect object
+- `binder ➝` : Creates a basic WireBox configuration binder
+- `inject ➝` : WireBox property injection
+- `provider ➝` : Creates a WireBox provider method
+- `setter ➝` : Creates a WireBox setter injection
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Installation instructions : 
 
-## Release Notes
+### With Package Control ###
 
-Users appreciate release notes as you update your extension.
+Install the latest *vscode-coldbox* package from https://marketplace.visualstudio.com/.
 
-### 1.0.0
+## References:
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- A ColdBox Platform Bundle v2.0.0 for Sublime Text 2/3 - https://github.com/lmajano/cbox-coldbox-sublime
