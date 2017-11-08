@@ -2,3 +2,4 @@
 .vscode-test/**
 .gitignore
 build.ps1
+vsc-extension-quickstart.md
