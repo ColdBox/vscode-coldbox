@@ -1,10 +1,9 @@
-# A ColdBox Platform Bundle v2.0.0 for Visual Studio Code
+# A ColdBox Platform Bundle v0.1.0 for Visual Studio Code
 
 Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
 ## Target Platforms
 - ColdBox 4.X.X
-- TestBox 2.X.X
 
 ## Currently supported features
 
