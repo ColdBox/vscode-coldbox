@@ -21,7 +21,6 @@ Code completion for all major ColdBox + TestBox functions and scopes:
 - `log ➝` : "coldbox.system.logging.Logger",
 - `logbox ➝` : "coldbox.system.logging.LogBox",
 - `wirebox ➝` : "coldbox.system.ioc.Injector",
-- `$assert` : "testbox.system.Assertion"
 
 ### Code Skeleton Snippets
 
