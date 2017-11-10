@@ -12,9 +12,12 @@
         "Snippets"
     ],
     "contributes": {
-        "snippets": [
-            {
+        "snippets": [{
                 "language": "lang-cfml",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "cfml",
                 "path": "./snippets/snippets.json"
             }
         ]
@@ -23,7 +26,9 @@
         "CFML",
         "ColdFusion",
         "Lucee",
-        "ColdBox"
+        "ColdBox",
+        "MVC",
+        "HMVC"
     ],
     "dependencies": {}
 }
