@@ -1,5 +1,5 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-build.ps1
+build.sh
 vsc-extension-quickstart.md
