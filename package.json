@@ -13,7 +13,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onLanguage:lang-cfml",
+        "onLanguage:cfml"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -42,10 +43,11 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.5.3",
-        "vscode": "^1.1.5",
+        "@types/lodash": "^4.14.85",
         "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "lodash": "^4.17.4",
+        "typescript": "^2.5.3",
+        "vscode": "^1.1.5"
     },
     "keywords": [
         "CFML",
