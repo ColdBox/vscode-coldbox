@@ -25,8 +25,6 @@ done
 ./node_modules/.bin/snippetToVsCode -s ./target -o ./snippets/snippets.json
 
 npm uninstall convert-snippets-to-vscode
-rm -fr ./node_modules
-rm ./package-lock.json
 rm -fr ./cbox-coldbox-sublime
 rm -fr ./target
 

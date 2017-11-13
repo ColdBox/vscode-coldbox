@@ -1,5 +1,9 @@
 .vscode/**
 .vscode-test/**
+out/test/**
+out/**/*.map
+src/**
 .gitignore
-build.sh
+tsconfig.json
 vsc-extension-quickstart.md
+build.sh
