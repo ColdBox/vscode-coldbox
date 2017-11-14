@@ -2,7 +2,7 @@
     "name": "vscode-coldbox",
     "displayName": "vscode-coldbox",
     "description": "ColdBox Platform Support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "ilich8086",
     "icon": "icon.png",
     "engines": {
@@ -14,7 +14,10 @@
     ],
     "activationEvents": [
         "onLanguage:lang-cfml",
-        "onLanguage:cfml"
+        "onLanguage:cfml",
+        "workspaceContains:**/*.cfm",
+        "workspaceContains:**/*.cfml",
+        "workspaceContains:**/*.cfc"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -33,7 +36,17 @@
                 "language": "cfml",
                 "path": "./snippets/snippets.json"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "ColdBox for VS Code configuration",
+            "properties": {
+                "coldbox.autocomplete": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable ColdBox autocomplete"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -45,7 +58,6 @@
     "devDependencies": {
         "@types/lodash": "^4.14.85",
         "@types/node": "^7.0.43",
-        "lodash": "^4.17.4",
         "typescript": "^2.5.3",
         "vscode": "^1.1.5"
     },
@@ -54,8 +66,9 @@
         "ColdFusion",
         "Lucee",
         "ColdBox",
-        "MVC",
-        "HMVC"
+        "MVC"
     ],
-    "dependencies": {}
+    "dependencies": {
+        "lodash": "^4.17.4"
+    }
 }
