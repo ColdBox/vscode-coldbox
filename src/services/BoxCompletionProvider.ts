@@ -9,9 +9,8 @@ export class BoxCompletionProvider implements vscode.CompletionItemProvider {
             context: vscode.CompletionContext): vscode.ProviderResult<vscode.CompletionItem[] | vscode.CompletionList> {
         
         return new Promise<vscode.CompletionItem[]>((resolve, reject) => {
-            let factory = new CompletionFactory();
-            let currentLine = document.lineAt(position.line).text;
-            let completions = factory.getCompletions(currentLine);
+            let factory = new CompletionFactory(document, position);
+            let completions = factory.getCompletions();
             if (completions === null) {
                 completions = [];
             }

@@ -9,14 +9,21 @@ export class CompletionFactory {
             return value !== 'all';
         });
 
-    public getCompletions(line?: string): vscode.CompletionItem[] {
-        console.log(CompletionFactory.prefixes);
+    private document: vscode.TextDocument;
+    private position: vscode.Position;
+
+    constructor(document: vscode.TextDocument, position: vscode.Position) {
+        this.document = document;
+        this.position = position;
+    }
+
+    public getCompletions(): vscode.CompletionItem[] {
+        let line = this.document.lineAt(this.position.line).text;
         let prefix = this.findPrefix(line);
         if (prefix === null) {
             return this.getAllCompletions();
         }
         else {
-            console.log(prefix);
             return this.getTargetCompletions(prefix);
         }
     }
@@ -67,17 +74,26 @@ export class CompletionFactory {
         let result = [];
         let items = CompletionDataStore.completions[prefix];
         for (let item of items) {
-            result.push(this.createCompletionItem(item, prefix));
+            var completionItem = this.createCompletionItem(item, null, prefix);
+            result.push(completionItem);
         }
 
         return result;
     }
 
-    private createCompletionItem(data: CompletionInfo | string, prefix?: string): vscode.CompletionItem {
+    private createCompletionItem(data: CompletionInfo | string, 
+            prefix?: string,
+            filterOutPrefix?: string): vscode.CompletionItem {
         if (typeof data === 'object') {
             let trigger = _.isEmpty(prefix) ? data.trigger : `${prefix}.${data.trigger}`;
             let item = new vscode.CompletionItem(trigger, vscode.CompletionItemKind.Snippet);
-            let snippet = new vscode.SnippetString(data.snippet);
+
+            let snippetSrc = data.snippet;
+            if (!_.isEmpty(filterOutPrefix) && _.startsWith(snippetSrc, filterOutPrefix + '.')) {
+                snippetSrc = snippetSrc.substring(filterOutPrefix.length + 1);
+            }
+
+            let snippet = new vscode.SnippetString(snippetSrc);
             item.insertText = snippet;
             if (!_.isEmpty(data.doc)) {
                 item.documentation = data.doc;
