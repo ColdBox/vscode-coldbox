@@ -14,6 +14,7 @@ Target[11]="./cbox-coldbox-sublime/skeletons/model.sublime-snippet"
 Target[12]="./cbox-coldbox-sublime/skeletons/routes.sublime-snippet"
 
 git clone https://github.com/lmajano/cbox-coldbox-sublime
+npm install
 npm install convert-snippets-to-vscode
 
 mkdir ./target
@@ -23,6 +24,7 @@ do
 done
 
 ./node_modules/.bin/snippetToVsCode -s ./target -o ./snippets/snippets.json
+node ./build/build-data-source.js
 
 npm uninstall convert-snippets-to-vscode
 rm -fr ./cbox-coldbox-sublime
