@@ -3,7 +3,7 @@
     "displayName": "vscode-coldbox",
     "description": "ColdBox Platform Support for Visual Studio Code",
     "version": "0.1.0",
-    "publisher": "ilich8086",
+    "publisher": "ortus-solutions",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.18.0"
@@ -21,14 +21,11 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-            {
-                "command": "extension.sayHello",
-                "title": "Hello World"
-            }
-        ],
-        "snippets": [
-            {
+        "commands": [{
+            "command": "extension.sayHello",
+            "title": "Hello World"
+        }],
+        "snippets": [{
                 "language": "lang-cfml",
                 "path": "./snippets/snippets.json"
             },
