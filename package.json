@@ -8,6 +8,13 @@
     "engines": {
         "vscode": "^1.18.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ortus-Solutions/vscode-coldbox.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Ortus-Solutions/vscode-coldbox/issues"
+    },
     "categories": [
         "Snippets",
         "Other"
@@ -21,11 +28,8 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }],
-        "snippets": [{
+        "snippets": [
+            {
                 "language": "lang-cfml",
                 "path": "./snippets/snippets.json"
             },
