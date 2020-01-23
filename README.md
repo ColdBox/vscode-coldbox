@@ -3,6 +3,7 @@
 Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
 ## Target Platforms
+
 - ColdBox 4.X.X
 
 ## Currently supported features
@@ -10,6 +11,7 @@ Get the latest Visual Studio Code from https://code.visualstudio.com/.
 This bundle includes functionality not only for ColdBox MVC, but also for WireBox, CacheBox and LogBox.
 
 ### Code Insight
+
 Code completion for all major ColdBox + TestBox functions and scopes:
 
 - `binder ➝` : "coldbox.system.ioc.config.Binder",
@@ -67,12 +69,12 @@ Code completion for all major ColdBox + TestBox functions and scopes:
 - `provider ➝` : Creates a WireBox provider method
 - `setter ➝` : Creates a WireBox setter injection
 
-## Installation instructions : 
+## Installation instructions :
 
-### With Package Control ###
+### With Package Control
 
 Install the latest *vscode-coldbox* package from https://marketplace.visualstudio.com/.
 
-## References:
+## References
 
 - A ColdBox Platform Bundle v2.0.0 for Sublime Text 2/3 - https://github.com/lmajano/cbox-coldbox-sublime
