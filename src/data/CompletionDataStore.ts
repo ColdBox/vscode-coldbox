@@ -1,9 +1,10 @@
-export interface CompletionInfo { trigger: string;
- doc?: string;
- snippet: string;
- }
+export interface CompletionInfo {
+	trigger:	string;
+	doc?:		string;
+	snippet:	string;
+}
 
-export class CompletionDataStore { static completions: { [key: string]: CompletionInfo[] } = {
+export class CompletionDataStore { static completions: { [ key: string ]: CompletionInfo[] } = {
 	"all": [
 		{
 			"doc": "(ColdBox BaseSpec)",
