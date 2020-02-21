@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 import * as _ from 'lodash';
 import { CompletionDataStore, CompletionInfo } from '../data/CompletionDataStore'
-import { runInThisContext } from 'vm';
 
 export class CompletionFactory {
     private static prefixes = _.keys( CompletionDataStore.completions )
