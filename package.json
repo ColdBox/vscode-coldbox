@@ -56,10 +56,10 @@
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
     "devDependencies": {
-        "@types/lodash": "^4.14.85",
-        "@types/node": "^7.0.43",
-        "typescript": "^2.5.3",
-        "vscode": "^1.1.5"
+        "@types/lodash": "^4.14.149",
+        "@types/node": "^7.10.9",
+        "typescript": "^2.9.2",
+        "vscode": "^1.1.36"
     },
     "keywords": [
         "CFML",
