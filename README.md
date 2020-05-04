@@ -1,11 +1,11 @@
-# A ColdBox Platform Bundle v0.1.0 for Visual Studio Code
+# A ColdBox Platform Bundle for Visual Studio Code
 
 Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
-## Target Platforms
+## Supported Target Platforms
 
 - ColdBox 5.X.X
-- ColdBox 6.X.X 
+- ColdBox 6.X.X
 
 ## Currently supported features
 
