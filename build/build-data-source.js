@@ -18,7 +18,8 @@ const parser = {
         return obj;
     },
     createSnippet: function (sublime) {
-        if (_.isEmpty(sublime.trigger)) {
+        if ( _.isEmpty( sublime.trigger ) || sublime.trigger.indexOf( "BaseSpec" ) > 0 ) {
+            console.log( " ==> Skipping " + sublime.trigger );
             return null;
         }
 
@@ -74,6 +75,11 @@ function main() {
             if (obj.completions) {
                 for (let sublimeSnippet of obj.completions) {
                     let snippet = parser.createSnippet(sublimeSnippet);
+
+                    if( snippet == null ){
+                        continue;
+                    }
+
                     if (!dataSource.hasOwnProperty(snippet.prefix)) {
                         dataSource[snippet.prefix] = [];
                     }

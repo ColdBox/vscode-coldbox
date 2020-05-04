@@ -1,7 +1,7 @@
 {
 	"active": {
 		"prefix": "active",
-		"body": "\n/**\n* A cool ${1:EntityName} entity\n*/\ncomponent persistent=\"true\" table=\"${2:TableName}\" extends=\"cborm.models.ActiveEntity\"{\n\n\t// Primary Key\n\tproperty name=\"id\" fieldtype=\"id\" column=\"id\" generator=\"${3:native}\";\n\t\n\t// Properties\n\t${0}\n\t\n\t// Validation\n\tthis.constraints = {\n\t\t// Example: age = { required=true, min=\"18\", type=\"numeric\" }\n\t};\n\t\n\t// Constructor\n\tfunction init(){\n\t\tsuper.init();\n\n\t\treturn this;\n\t}\n}\n\n",
+		"body": "\n/**\n * A cool ${1:EntityName} entity\n */\ncomponent persistent=\"true\" table=\"${2:TableName}\" extends=\"cborm.models.ActiveEntity\"{\n\n\t// Primary Key\n\tproperty name=\"id\" fieldtype=\"id\" column=\"id\" generator=\"${3:native}\";\n\t\n\t// Properties\n\t${0}\n\t\n\t// Validation\n\tthis.constraints = {\n\t\t// Example: age = { required=true, min=\"18\", type=\"numeric\" }\n\t};\n\n\t// Mementifier\n\tthis.memento = {\n\t\tdefaultIncludes = [ ],\n\t\tdefaultExcludes = [ ],\n\t\tneverInlucde \t= [ ]\n\t};\n\t\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\t\tsuper.init();\n\n\t\treturn this;\n\t}\n}\n\n",
 		"description": "Create an Active ORM Entity",
 		"scope": "source,text"
 	},
@@ -13,31 +13,31 @@
 	},
 	"config": {
 		"prefix": "config",
-		"body": "\n/**\n* ColdBox Configuration File\n*/\ncomponent{\n\t\n\t// Configure ColdBox Application\n\tfunction configure(){\n\n\t\t// coldbox directives\n\t\tcoldbox = {\n\t\t\t//Application Setup\n\t\t\tappName \t\t\t\t= \"${1:Your App Name}\",\n\t\t\teventName \t\t\t\t= \"event\",\n\n\t\t\t//Development Settings\n\t\t\treinitPassword\t\t\t= \"\",\n\t\t\thandlersIndexAutoReload = true,\n\n\t\t\t//Implicit Events\n\t\t\tdefaultEvent\t\t\t= \"Main.index\",\n\t\t\trequestStartHandler\t\t= \"Main.onRequestStart\",\n\t\t\trequestEndHandler\t\t= \"\",\n\t\t\tapplicationStartHandler = \"Main.onAppInit\",\n\t\t\tapplicationEndHandler\t= \"\",\n\t\t\tsessionStartHandler \t= \"\",\n\t\t\tsessionEndHandler\t\t= \"\",\n\t\t\tmissingTemplateHandler\t= \"\",\n\n\t\t\t//Extension Points\n\t\t\tapplicationHelper\t\t\t= \"includes/helpers/ApplicationHelper.cfm\",\n\t\t\tViewsHelper\t\t\t\t\t= \"\",\n\t\t\tcoldboxExtensionsLocation \t= \"\",\n\t\t\tmodulesExternalLocation\t\t= [],\n\t\t\tpluginsExternalLocation \t= \"\",\n\t\t\tviewsExternalLocation\t\t= \"\",\n\t\t\tlayoutsExternalLocation \t= \"\",\n\t\t\thandlersExternalLocation  \t= \"\",\n\t\t\trequestContextDecorator \t= \"\",\n\t\t\tcontrollerDecorator \t\t= \"\",\n\n\t\t\t//Error/Exception Handling\n\t\t\texceptionHandler\t\t= \"\",\n\t\t\tonInvalidEvent\t\t\t= \"\",\n\t\t\tcustomErrorTemplate\t\t= \"\",\n\n\t\t\t//Application Aspects\n\t\t\thandlerCaching \t\t\t= false,\n\t\t\teventCaching\t\t\t= false,\n\t\t\tviewCaching \t\t\t= false\n\t\t};\n\n\t\t// custom settings\n\t\tsettings = {\n\n\t\t};\n\n\t\t// environment settings, create a detectEnvironment() method to detect it yourself.\n\t\t// create a function with the name of the environment so it can be executed if that environment is detected\n\t\t// the value of the environment is a list of regex patterns to match the cgi.http_host.\n\t\tenvironments = {\n\t\t\tdevelopment = \"^localhost,127\\.0\\.0\\.1\"\n\t\t};\n\n\t\t// Module Directives\n\t\tmodules = {\n\t\t\t//Turn to false in production\n\t\t\tautoReload = false,\n\t\t\t// An array of modules names to load, empty means all of them\n\t\t\tinclude = [],\n\t\t\t// An array of modules names to NOT load, empty means none\n\t\t\texclude = []\n\t\t};\n\n\t\t//LogBox DSL\n\t\tlogBox = {\n\t\t\t// Define Appenders\n\t\t\tappenders = {\n\t\t\t\tconsole = { class=\"coldbox.system.logging.appenders.ConsoleAppender\" }\n\t\t\t},\n\t\t\t// Root Logger\n\t\t\troot = { levelmax=\"INFO\", appenders=\"*\" },\n\t\t\t// Implicit Level Categories\n\t\t\tinfo = [ \"coldbox.system\" ]\n\t\t};\n\n\t\t//Layout Settings\n\t\tlayoutSettings = {\n\t\t\tdefaultLayout = \"Main.cfm\",\n\t\t\tdefaultView   = \"\"\n\t\t};\n\n\t\t//Interceptor Settings\n\t\tinterceptorSettings = {\n\t\t\tthrowOnInvalidStates = false,\n\t\t\tcustomInterceptionPoints = \"\"\n\t\t};\n\n\t\t//Register interceptors as an array, we need order\n\t\tinterceptors = [\n\t\t\t//SES\n\t\t\t{\n\t\t\t\tclass=\"coldbox.system.interceptors.SES\"\n\t\t\t}\n\t\t];\n\n\t\t/*\n\t\t// flash scope configuration\n\t\tflash = {\n\t\t\tscope = \"session,client,cluster,ColdboxCache,or full path\",\n\t\t\tproperties = {}, // constructor properties for the flash scope implementation\n\t\t\tinflateToRC = true, // automatically inflate flash data into the RC scope\n\t\t\tinflateToPRC = false, // automatically inflate flash data into the PRC scope\n\t\t\tautoPurge = true, // automatically purge flash data for you\n\t\t\tautoSave = true // automatically save flash scopes at end of a request and on relocations.\n\t\t};\n\n\t\t//Register Layouts\n\t\tlayouts = [\n\t\t\t{ name = \"login\",\n\t\t \t  file = \"Layout.tester.cfm\",\n\t\t\t  views = \"vwLogin,test\",\n\t\t\t  folders = \"tags,pdf/single\"\n\t\t\t}\n\t\t];\n\n\t\t//Conventions\n\t\tconventions = {\n\t\t\thandlersLocation = \"handlers\",\n\t\t\tpluginsLocation  = \"plugins\",\n\t\t\tviewsLocation \t = \"views\",\n\t\t\tlayoutsLocation  = \"layouts\",\n\t\t\tmodelsLocation \t = \"model\",\n\t\t\teventAction \t = \"index\"\n\t\t};\n\n\t\t//Datasources\n\t\tdatasources = {\n\t\t\tmysite   = {name=\"mySite\", dbType=\"mysql\", username=\"root\", password=\"pass\"},\n\t\t\tblog_dsn = {name=\"myBlog\", dbType=\"oracle\", username=\"root\", password=\"pass\"}\n\t\t};\n\t\t*/\n\n\t}\n\n\t/**\n\t* Dev environment\n\t*/\n\tfunction development(){\n\t\tcoldbox.customErrorTemplate = \"/coldbox/system/includes/BugReport.cfm\";\n\t}\n\t\n}\n",
+		"body": "\n/**\n * ColdBox Configuration File\n */\ncomponent{\n\t\n\t/**\n\t * Configure the ColdBox Application\n\t */\n\tfunction configure(){\n\n\t\t// coldbox directives\n\t\tcoldbox = {\n\t\t\t// Application Setup\n\t\t\tappName \t\t\t\t= getSystemSetting( \"APPNAME\", \"${1:Your App Name}\" ),\n\t\t\t\n\t\t\t// Development Settings\n\t\t\treinitPassword\t\t\t= \"\",\n\t\t\thandlersIndexAutoReload = true,\n\n\t\t\t// Implicit Events\n\t\t\tdefaultEvent\t\t\t= \"\",\n\t\t\trequestStartHandler\t\t= \"Main.onRequestStart\",\n\t\t\trequestEndHandler\t\t= \"\",\n\t\t\tapplicationStartHandler = \"Main.onAppInit\",\n\t\t\tapplicationEndHandler\t= \"\",\n\t\t\tsessionStartHandler \t= \"\",\n\t\t\tsessionEndHandler\t\t= \"\",\n\t\t\tmissingTemplateHandler\t= \"\",\n\n\t\t\t// Extension Points\n\t\t\tapplicationHelper \t\t\t= \"includes/helpers/ApplicationHelper.cfm\",\n\t\t\tviewsHelper\t\t\t\t\t= \"\",\n\t\t\tmodulesExternalLocation\t\t= [],\n\t\t\tviewsExternalLocation\t\t= \"\",\n\t\t\tlayoutsExternalLocation \t= \"\",\n\t\t\thandlersExternalLocation  \t= \"\",\n\t\t\trequestContextDecorator \t= \"\",\n\t\t\tcontrollerDecorator\t\t\t= \"\",\n\n\t\t\t// Error/Exception Handling\n\t\t\tinvalidHTTPMethodHandler \t= \"\",\n\t\t\texceptionHandler\t\t\t= \"main.onException\",\n\t\t\tinvalidEventHandler\t\t\t= \"\",\n\t\t\tcustomErrorTemplate\t\t\t= \"\",\n\n\t\t\t// Application Aspects\n\t\t\thandlerCaching \t\t\t= false,\n\t\t\teventCaching\t\t\t= false,\n\t\t\tviewCaching\t\t\t\t= false,\n\t\t\t// Will automatically do a mapDirectory() on your `models` for you.\n\t\t\tautoMapModels\t\t\t= true\n\t\t};\n\n\t\t// custom settings\n\t\tsettings = {\n\n\t\t};\n\n\t\t// environment settings, create a detectEnvironment() method to detect it yourself.\n\t\t// create a function with the name of the environment so it can be executed if that environment is detected\n\t\t// the value of the environment is a list of regex patterns to match the cgi.http_host.\n\t\tenvironments = {\n\t\t\tdevelopment = \"^localhost,127\\.0\\.0\\.1\"\n\t\t};\n\n\t\t// Module Directives\n\t\tmodules = {\n\t\t\t// An array of modules names to load, empty means all of them\n\t\t\tinclude = [],\n\t\t\t// An array of modules names to NOT load, empty means none\n\t\t\texclude = []\n\t\t};\n\n\t\t//LogBox DSL\n\t\tlogBox = {\n\t\t\t// Define Appenders\n\t\t\tappenders = {\n\t\t\t\tconsole = { class=\"coldbox.system.logging.appenders.ConsoleAppender\" }\n\t\t\t},\n\t\t\t// Root Logger\n\t\t\troot = { levelmax=\"INFO\", appenders=\"*\" },\n\t\t\t// Implicit Level Categories\n\t\t\tinfo = [ \"coldbox.system\" ]\n\t\t};\n\n\t\t/ Layout Settings\n\t\tlayoutSettings = {\n\t\t\tdefaultLayout = \"\",\n\t\t\tdefaultView   = \"\"\n\t\t};\n\n\t\t// Interceptor Settings\n\t\tinterceptorSettings = {\n\t\t\tcustomInterceptionPoints = \"\"\n\t\t};\n\n\t\t// Register interceptors as an array, we need order\n\t\tinterceptors = [\n\t\t];\n\n\t\t// Module Settings\n\t\tmoduleSettings = {\n\n\t\t};\n\n\t\t/*\n\t\t\t// flash scope configuration\n\t\t\tflash = {\n\t\t\t\tscope = \"session,client,cluster,ColdboxCache,or full path\",\n\t\t\t\tproperties = {}, // constructor properties for the flash scope implementation\n\t\t\t\tinflateToRC = true, // automatically inflate flash data into the RC scope\n\t\t\t\tinflateToPRC = false, // automatically inflate flash data into the PRC scope\n\t\t\t\tautoPurge = true, // automatically purge flash data for you\n\t\t\t\tautoSave = true // automatically save flash scopes at end of a request and on relocations.\n\t\t\t};\n\n\t\t\t//Conventions\n\t\t\tconventions = {\n\t\t\t\thandlersLocation = \"handlers\",\n\t\t\t\tpluginsLocation  = \"plugins\",\n\t\t\t\tviewsLocation \t = \"views\",\n\t\t\t\tlayoutsLocation  = \"layouts\",\n\t\t\t\tmodelsLocation \t = \"model\",\n\t\t\t\teventAction \t = \"index\"\n\t\t\t};\n\n\t\t*/\n\n\t}\n\n\t/**\n\t * Dev environment\n\t */\n\tfunction development(){\n\t\tcoldbox.customErrorTemplate = \"/coldbox/system/includes/BugReport.cfm\";\n\t}\n\t\n}\n",
 		"description": "ColdBox Configuration File (Coldbox.cfc)",
 		"scope": "source,text"
 	},
 	"entity": {
 		"prefix": "entity",
-		"body": "\n/**\n* A cool ${1:EntityName} entity\n*/\ncomponent persistent=\"true\" table=\"${2:TableName}\"{\n\n\t// Primary Key\n\tproperty name=\"id\" fieldtype=\"id\" column=\"id\" generator=\"${3:native}\";\n\t\n\t// Properties\n\t${0}\n\t\n\t// Validation\n\tthis.constraints = {\n\t\t// Example: age = { required=true, min=\"18\", type=\"numeric\" }\n\t};\n\t\n\t/**\n\t* Constructor\n\t*/ \n\tfunction init(){\n\t\t\n\t\treturn this;\n\t}\n}\n\n",
+		"body": "\n/**\n * A cool ${1:EntityName} entity\n */\ncomponent persistent=\"true\" table=\"${2:TableName}\"{\n\n\t// Primary Key\n\tproperty name=\"id\" fieldtype=\"id\" column=\"id\" generator=\"${3:native}\";\n\t\n\t// Properties\n\t${0}\n\t\n\t// Mementifier\n\tthis.memento = {\n\t\tdefaultIncludes = [ ],\n\t\tdefaultExcludes = [ ],\n\t\tneverInlucde \t= [ ]\n\t};\n\t\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\t\treturn this;\n\t}\n}\n\n",
 		"description": "Create an ORM Entity",
 		"scope": "source,text"
 	},
 	"ormservice": {
 		"prefix": "ormservice",
-		"body": "\n/**\n* A ColdBox Generic ORM entity service\n*/\ncomponent extends=\"cborm.models.BaseORMService\" singleton{\n\t\n\t/**\n\t* Constructor\n\t*/\n\tfunction init(){\n\t\t\n\t\t// init super class\n\t\tsuper.init();\n\t\t\n\t\t// Use Query Caching\n\t    setUseQueryCaching( ${1:false} );\n\t    // Query Cache Region\n\t    setQueryCacheRegion( '${2:query.region}' );\n\t    // EventHandling\n\t    setEventHandling( ${3:true} );\n\t    \n\t    ${0}\n\n\t    return this;\n\t}\n\t\n}\n",
+		"body": "\n/**\n * A ColdBox Generic ORM entity service\n */\ncomponent extends=\"cborm.models.BaseORMService\" singleton{\n\t\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\t\t\n\t\t// init super class\n\t\tsuper.init();\n\t\t\n\t\t// Use Query Caching\n\t    setUseQueryCaching( ${1:false} );\n\t    // Query Cache Region\n\t    setQueryCacheRegion( '${2:query.region}' );\n\t    // EventHandling\n\t    setEventHandling( ${3:true} );\n\t    \n\t    ${0}\n\n\t    return this;\n\t}\n\t\n}\n",
 		"description": "Create a ColdBox Generic ORM Entity Service",
 		"scope": "source,text"
 	},
 	"virtualservice": {
 		"prefix": "virtualservice",
-		"body": "\n/**\n* A ColdBox Enabled virtual entity service\n*/\ncomponent extends=\"cborm.models.VirtualEntityService\" singleton{\n\t\n\t/**\n\t* Constructor\n\t*/\n\tfunction init(){\n\t\t\n\t\t// init super class\n\t\tsuper.init(entityName=\"${1:Entityname}\");\n\t\t\n\t\t// Use Query Caching\n\t    setUseQueryCaching( ${2:false} );\n\t    // Query Cache Region\n\t    setQueryCacheRegion( '${3:query.${1}}' );\n\t    // EventHandling\n\t    setEventHandling( ${4:true} );\n\t    \n\t    ${0}\n\n\t    return this;\n\t}\n\t\n}\n",
+		"body": "\n/**\n * A ColdBox Enabled virtual entity service\n */\ncomponent extends=\"cborm.models.VirtualEntityService\" singleton{\n\t\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\t\t\n\t\t// init super class\n\t\tsuper.init( entityName=\"${1:Entityname}\" );\n\t\t\n\t\t// Use Query Caching\n\t    setUseQueryCaching( ${2:false} );\n\t    // Query Cache Region\n\t    setQueryCacheRegion( '${3:query.${1}}' );\n\t    // EventHandling\n\t    setEventHandling( ${4:true} );\n\t    \n\t    ${0}\n\n\t    return this;\n\t}\n\t\n}\n",
 		"description": "Create a ColdBox Virtual Entity Service",
 		"scope": "source,text"
 	},
 	"action": {
 		"prefix": "action",
-		"body": "\n/**\n* ${1:index}\n*/\nfunction ${1:index}( event, rc, prc ){\n\t${0}\n\tevent.setView( \"${TM_FILENAME/\\.cfc//}/${1}\" );\n}\n",
+		"body": "\n/**\n * ${1:index}\n */\nfunction ${1:index}( event, rc, prc ){\n\t${0}\n\tevent.setView( \"${TM_FILENAME/\\.cfc//}/${1}\" );\n}\n",
 		"description": "Handler Action",
 		"scope": "source,text"
 	},
@@ -49,7 +49,7 @@
 	},
 	"around": {
 		"prefix": "around",
-		"body": "\n/**\n* Executes an around handler\n*/\nfunction aroundHandler( event, rc, prc, targetAction, eventArguments ){\n\t// Prepare action arguments\n\tvar args = { event = arguments.event, rc = arguments.rc, prc = arguments.prc };\n\tstructAppend( args, arguments.eventArguments );\n\t// Execute targeted action\n\tvar results = arguments.targetAction( argumentCollection=args );\n\t// Return results if they exist\n\tif( !isNull( results ) ){\n\t\treturn results;\n\t}\n}\n",
+		"body": "\n/**\n * Executes an around handler\n */\nfunction aroundHandler( event, rc, prc, targetAction, eventArguments ){\n\t// Prepare action arguments\n\tvar args = { event = arguments.event, rc = arguments.rc, prc = arguments.prc };\n\tstructAppend( args, arguments.eventArguments );\n\t// Execute targeted action\n\tvar results = arguments.targetAction( argumentCollection=args );\n\t// Return results if they exist\n\tif( !isNull( results ) ){\n\t\treturn results;\n\t}\n}\n",
 		"description": "AroundHandler action",
 		"scope": "source,text"
 	},
@@ -61,7 +61,7 @@
 	},
 	"cfc": {
 		"prefix": "cfc",
-		"body": "\n/**\n* ${1:index}\n*/\ncomponent{\n\n\t/**\n\t* Constructor\n\t*/\n\tfunction init(){\n\n\t\treturn this;\n\t}\n\n}\n",
+		"body": "\n/**\n * ${1:index}\n */\ncomponent accessors=\"true\"{\n\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\n\t\treturn this;\n\t}\n\n}\n",
 		"description": "Script Component",
 		"scope": "source,text"
 	},
@@ -73,13 +73,13 @@
 	},
 	"function": {
 		"prefix": "function",
-		"body": "\n/**\n* ${1:index}\n*/\nfunction ${1:}(){\n\n}\n",
+		"body": "\n/**\n * ${1:index}\n */\nfunction ${1:}(){\n\n}\n",
 		"description": "Script Function",
 		"scope": "source,text"
 	},
 	"handler": {
 		"prefix": "handler",
-		"body": "\n/**\n* ${1:My Event Handler Hint}\n*/\ncomponent extends=\"coldbox.system.EventHandler\"{\n\t\n\t// OPTIONAL HANDLER PROPERTIES\n\tthis.prehandler_only \t= \"\";\n\tthis.prehandler_except \t= \"\";\n\tthis.posthandler_only \t= \"\";\n\tthis.posthandler_except = \"\";\n\tthis.aroundHandler_only = \"\";\n\tthis.aroundHandler_except = \"\";\t\t\n\n\t// REST Allowed HTTP Methods Ex: this.allowedMethods = {delete='POST,DELETE',index='GET'}\n\tthis.allowedMethods = {};\n\t\n\t/**\n\tIMPLICIT FUNCTIONS: Uncomment to use\n\tfunction preHandler( event, rc, prc, action, eventArguments){}\n\tfunction postHandler( event, rc, prc, action, eventArguments){}\n\tfunction aroundHandler( event, rc, prc, targetAction, eventArguments ){\n\t\t// executed targeted action\n\t\tvar args = { event = arguments.event, rc = arguments.rc, prc = arguments.prc };\n\t\tstructAppend( args, arguments.eventArguments );\n\t\targuments.targetAction( argumentCollection=args );\n\t}\n\tfunction onMissingAction( event, rc, prc, missingAction, eventArguments ){\n\t}\n\tfunction onError( event, rc, prc, faultAction, exception, eventArguments ){\n\t}\n\tfunction onInvalidHTTPMethod( event, rc, prc, faultAction, eventArguments ){\n\t}\n\t*/\n\n\t/**\n\t* Index\n\t*/\n\tany function index( event, rc, prc ){\n\t\t${0}\n\t}\n\t\n}\n",
+		"body": "\n/**\n * ${1:My Event Handler Hint}\n */\ncomponent extends=\"coldbox.system.EventHandler\"{\n\t\n\t// OPTIONAL HANDLER PROPERTIES\n\tthis.prehandler_only \t= \"\";\n\tthis.prehandler_except \t= \"\";\n\tthis.posthandler_only \t= \"\";\n\tthis.posthandler_except = \"\";\n\tthis.aroundHandler_only = \"\";\n\tthis.aroundHandler_except = \"\";\t\t\n\n\t// REST Allowed HTTP Methods Ex: this.allowedMethods = {delete='POST,DELETE',index='GET'}\n\tthis.allowedMethods = {};\n\t\n\t/**\n\tIMPLICIT FUNCTIONS: Uncomment to use\n\tfunction preHandler( event, rc, prc, action, eventArguments){}\n\tfunction postHandler( event, rc, prc, action, eventArguments){}\n\tfunction aroundHandler( event, rc, prc, targetAction, eventArguments ){\n\t\t// executed targeted action\n\t\tvar args = { event = arguments.event, rc = arguments.rc, prc = arguments.prc };\n\t\tstructAppend( args, arguments.eventArguments );\n\t\targuments.targetAction( argumentCollection=args );\n\t}\n\tfunction onMissingAction( event, rc, prc, missingAction, eventArguments ){\n\t}\n\tfunction onError( event, rc, prc, faultAction, exception, eventArguments ){\n\t}\n\tfunction onInvalidHTTPMethod( event, rc, prc, faultAction, eventArguments ){\n\t}\n\t*/\n\n\t/**\n\t * Index\n\t */\n\tany function index( event, rc, prc ){\n\t\t${0}\n\t}\n\t\n}\n",
 		"description": "ColdBox Event Handler",
 		"scope": "source,text"
 	},
@@ -89,15 +89,27 @@
 		"description": "Script Property Injection",
 		"scope": "source,text"
 	},
+	"testaction": {
+		"prefix": "testaction",
+		"body": "\nit( \"${1:}\", function(){\n\tvar event \t= this.request( ${2:main.index}, {} );\n\tvar rc \t\t= event.getCollection();\n\tvar prc \t= event.getPrivateCollection();\n\n});\n",
+		"description": "ColdBox Integration Test Case",
+		"scope": "source,text"
+	},
+	"integrationTest": {
+		"prefix": "integrationTest",
+		"body": "\n/*******************************************************************************\n*\tIntegration Test as BDD (CF10+ or Railo 4.1 Plus)\n*\n*\tExtends the integration class: coldbox.system.testing.BaseTestCase\n*\n*\tso you can test your ColdBox application headlessly. The 'appMapping' points by default to\n*\tthe '/root' mapping created in the test folder Application.cfc.  Please note that this\n*\tApplication.cfc must mimic the real one in your root, including ORM settings if needed.\n*\n*\tThe 'execute()' method is used to execute a ColdBox event, with the following arguments\n*\t* event : the name of the event\n*\t* private : if the event is private or not\n*\t* prePostExempt : if the event needs to be exempt of pre post interceptors\n*\t* eventArguments : The struct of args to pass to the event\n*\t* renderResults : Render back the results of the event\n*******************************************************************************/\ncomponent extends=\"coldbox.system.testing.BaseTestCase\" appMapping=\"/root\"{\n\n\t/*********************************** LIFE CYCLE Methods ***********************************/\n\n\tfunction beforeAll(){\n\t\tsuper.beforeAll();\n\t\t// do your own stuff here\n\t}\n\n\tfunction afterAll(){\n\t\t// do your own stuff here\n\t\tsuper.afterAll();\n\t}\n\n/*********************************** BDD SUITES ***********************************/\n\n\tfunction run(){\n\n\t\tdescribe( \"Main Handler\", function(){\n\n\t\t\tbeforeEach(function( currentSpec ){\n\t\t\t\t// Setup as a new ColdBox request, VERY IMPORTANT. ELSE EVERYTHING LOOKS LIKE THE SAME REQUEST.\n\t\t\t\tsetup();\n\t\t\t});\n\n\t\t\tit( \"+homepage renders\", function(){\n\t\t\t\tvar event = execute( event=\"main.index\", renderResults=true );\n\t\t\t\texpect(\tevent.getValue( name=\"welcomemessage\", private=true ) ).toBe( \"Welcome to ColdBox!\" );\n\t\t\t});\n\n\t\t});\n\n\t}\n\n}\n",
+		"description": "ColdBox Integration Test",
+		"scope": "source,text"
+	},
 	"point": {
 		"prefix": "point",
-		"body": "\n/**\n* ${1} interception point\n*/\nfunction ${1}( required event, required interceptData, required buffer ){\n\t${0}\n}\n",
+		"body": "\n/**\n * ${1} interception point\n */\nfunction ${1}( event, interceptData, buffer, rc, prc ){\n\t${0}\n}\n",
 		"description": "ColdBox Interception Point",
 		"scope": "source,text"
 	},
 	"interceptor": {
 		"prefix": "interceptor",
-		"body": "\n/**\n* ${1:My Interceptor Hint}\n*/\ncomponent extends=\"coldbox.system.Interceptor\"{\n\t\n\t// Configure Interceptor\n\tvoid function configure(){\n\t\t${0}\n\t}\n\n}\n",
+		"body": "\n/**\n * ${1:My Interceptor Hint}\n */\ncomponent extends=\"coldbox.system.Interceptor\"{\n\t\n\t/**\n\t * Configure the interceptor\n\t */\n\tvoid function configure(){\n\t\t${0}\n\t}\n\n}\n",
 		"description": "ColdBox Interceptor",
 		"scope": "source,text"
 	},
@@ -115,7 +127,7 @@
 	},
 	"model": {
 		"prefix": "model",
-		"body": "\n/**\n* ${1:My Hint}\n*/\ncomponent{\n\t\n\t/**\n\t* Constructor\n\t*/\n\tany function init(){\n\t\t${0}\n\t\treturn this;\n\t}\n\t\n}\n",
+		"body": "\n/**\n * ${1:My Hint}\n */\ncomponent accessors=\"true\"{\n\t\n\t/**\n\t * Constructor\n\t */\n\tfunction init(){\n\t\t${0}\n\t\treturn this;\n\t}\n\t\n}\n",
 		"description": "ColdBox Model Object",
 		"scope": "source,text"
 	},
@@ -127,43 +139,43 @@
 	},
 	"onerror": {
 		"prefix": "onerror",
-		"body": "\n/**\n* Executes when an exception occurs in this handler\n*/\nfunction onError( event, rc, prc, faultAction, exception, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes when an exception occurs in this handler\n */\nfunction onError( event, rc, prc, faultAction, exception, eventArguments ){\n\t${0}\n}\n",
 		"description": "OnError Action",
 		"scope": "source,text"
 	},
 	"onhttp": {
 		"prefix": "onhttp",
-		"body": "\n/**\n* Executes when an invalid HTTP method is called\n*/\nfunction onInvalidHTTPMethod( event, rc, prc, faultAction, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes when an invalid HTTP method is called\n */\nfunction onInvalidHTTPMethod( event, rc, prc, faultAction, eventArguments ){\n\t${0}\n}\n",
 		"description": "OnInvalidHTTPMethod Action",
 		"scope": "source,text"
 	},
 	"onma": {
 		"prefix": "onma",
-		"body": "\n/**\n* Executes when you execute an action that is missing\n*/\nfunction onMissingAction( event, rc, prc, missingAction, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes when you execute an action that is missing\n */\nfunction onMissingAction( event, rc, prc, missingAction, eventArguments ){\n\t${0}\n}\n",
 		"description": "OnMissingAction",
 		"scope": "source,text"
 	},
 	"postaction": {
 		"prefix": "postaction",
-		"body": "\n/**\n* Executes after your '${1} action only\n*/\nany function post${1}( event, rc, prc, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes after your '${1} action only\n */\nany function post${1}( event, rc, prc, eventArguments ){\n\t${0}\n}\n",
 		"description": "Post{Action} action",
 		"scope": "source,text"
 	},
 	"post": {
 		"prefix": "post",
-		"body": "\n/**\n* Executes after all handler actions\n*/\nany function postHandler( event, rc, prc, action, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes after all handler actions\n */\nany function postHandler( event, rc, prc, action, eventArguments ){\n\t${0}\n}\n",
 		"description": "PostHandler action",
 		"scope": "source,text"
 	},
 	"preaction": {
 		"prefix": "preaction",
-		"body": "\n/**\n* Executes before your '${1} action only\n*/\nany function pre${1}( event, rc, prc, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes before your '${1} action only\n */\nany function pre${1}( event, rc, prc, eventArguments ){\n\t${0}\n}\n",
 		"description": "Pre{Action} action",
 		"scope": "source,text"
 	},
 	"pre": {
 		"prefix": "pre",
-		"body": "\n/**\n* Executes before all handler actions\n*/\nany function preHandler( event, rc, prc, action, eventArguments ){\n\t${0}\n}\n",
+		"body": "\n/**\n * Executes before all handler actions\n */\nany function preHandler( event, rc, prc, action, eventArguments ){\n\t${0}\n}\n",
 		"description": "PreHandler action",
 		"scope": "source,text"
 	},
@@ -175,7 +187,7 @@
 	},
 	"prop": {
 		"prefix": "prop",
-		"body": "\n/**\n* ${1}\n*/\nproperty name=\"${1}\";\n",
+		"body": "\n/**\n * ${1}\n */\nproperty name=\"${1}\";\n",
 		"description": "Script Property",
 		"scope": "source,text"
 	},
@@ -185,10 +197,10 @@
 		"description": "Provider Method",
 		"scope": "source,text"
 	},
-	"routes": {
-		"prefix": "routes",
-		"body": "\n<cfscript>\n\t// Allow unique URL or combination of URLs, we recommend both enabled\n\tsetUniqueURLS(false);\n\t// Auto reload configuration, true in dev makes sense to reload the routes on every request\n\t//setAutoReload(false);\n\t// Sets automatic route extension detection and places the extension in the rc.format variable\n\t// setExtensionDetection(true);\n\t// The valid extensions this interceptor will detect\n\t// setValidExtensions('xml,json,jsont,rss,html,htm');\n\t// If enabled, the interceptor will throw a 406 exception that an invalid format was detected or just ignore it\n\t// setThrowOnInvalidExtension(true);\n\n\t// Base URL\n\tif( len(getSetting('AppMapping') ) lte 1){\n\t\tsetBaseURL(\"http://#cgi.HTTP_HOST#/index.cfm\");\n\t}\n\telse{\n\t\tsetBaseURL(\"http://#cgi.HTTP_HOST#/#getSetting('AppMapping')#/index.cfm\");\n\t}\n\n\t// Your Application Routes\n\taddRoute(pattern=\":handler/:action?\");\n\n\n\t/** Developers can modify the CGI.PATH_INFO value in advance of the SES\n\t\tinterceptor to do all sorts of manipulations in advance of route\n\t\tdetection. If provided, this function will be called by the SES\n\t\tinterceptor instead of referencing the value CGI.PATH_INFO.\n\n\t\tThis is a great place to perform custom manipulations to fix systemic\n\t\tURL issues your Web site may have or simplify routes for i18n sites.\n\n\t\t@Event The ColdBox RequestContext Object\n\t**/\n\tfunction PathInfoProvider(Event){\n\t\t/* Example:\n\t\tvar URI = CGI.PATH_INFO;\n\t\tif (URI eq \"api/foo/bar\")\n\t\t{\n\t\t\tEvent.setProxyRequest(true);\n\t\t\treturn \"some/other/value/for/your/routes\";\n\t\t}\n\t\t*/\n\t\treturn CGI.PATH_INFO;\n\t}\n</cfscript>\n",
-		"description": "New ColdBox Routes.cfm",
+	"router": {
+		"prefix": "router",
+		"body": "\ncomponent{\n\n\tfunction configure(){\n\t\t// Set Full Rewrites\n\t\tsetFullRewrites( true );\n\n\t\t/**\n\t\t * --------------------------------------------------------------------------\n\t\t * App Routes\n\t\t * --------------------------------------------------------------------------\n\t\t *\n\t\t * Here is where you can register the routes for your web application!\n\t\t * Go get Funky!\n\t\t *\n\t\t */\n\n\t\t// A nice healthcheck route example\n\t\troute(\"/healthcheck\",function(event,rc,prc){\n\t\t\treturn \"Ok!\";\n\t\t});\n\n\t\t// A nice RESTFul Route example\n\t\troute( \"/api/echo\", function( event, rc, prc ){\n\t\t\treturn {\n\t\t\t\t\"error\" : false,\n\t\t\t\t\"data\" \t: \"Welcome to my awesome API!\"\n\t\t\t};\n\t\t} );\n\n\t\t// Conventions based routing\n\t\troute( \":handler/:action?\" ).end();\n\t}\n\n}\n",
+		"description": "New ColdBox Router",
 		"scope": "source,text"
 	},
 	"setter": {

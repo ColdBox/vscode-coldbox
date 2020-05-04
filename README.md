@@ -4,7 +4,8 @@ Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
 ## Target Platforms
 
-- ColdBox 4.X.X
+- ColdBox 5.X.X
+- ColdBox 6.X.X 
 
 ## Currently supported features
 
@@ -69,7 +70,7 @@ Code completion for all major ColdBox + TestBox functions and scopes:
 - `provider ➝` : Creates a WireBox provider method
 - `setter ➝` : Creates a WireBox setter injection
 
-## Installation instructions :
+## Installation instructions
 
 ### With Package Control
 

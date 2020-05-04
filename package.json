@@ -2,7 +2,7 @@
     "name": "vscode-coldbox",
     "displayName": "vscode-coldbox",
     "description": "ColdBox Platform Support for Visual Studio Code",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "publisher": "ortus-solutions",
     "icon": "icon.png",
     "engines": {
@@ -69,6 +69,7 @@
         "MVC"
     ],
     "dependencies": {
+        "convert-snippets-to-vscode": "^1.0.2",
         "lodash": "^4.17.13"
     }
 }

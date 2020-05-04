@@ -1,15 +1,18 @@
 # Installation
 
 ## VSCE
+
 Make sure you have Node.js installed. Then run:
 
+```bash
 npm install -g vsce
+```
 
 ## Usage
 
 You can use vsce to easily package and publish your extensions:
 
-```
+```bash
 $ cd myExtension
 $ vsce package
 $ vsce publish
@@ -29,7 +32,7 @@ A publisher is an identity who can publish extensions to the Visual Studio Code 
 
 Once you have a Personal Access Token, you can create a new publisher using vsce:
 
-```
+```bash
 vsce create-publisher (publisher name)
 ```
 
@@ -40,7 +43,7 @@ Log in to a publisher
 
 If you already created a publisher before and want to use it with vsce:
 
-```
+```bash
 vsce login (publisher name)
 ```
 
@@ -48,6 +51,6 @@ Similarly to the create-publisher command, vsce will ask you for the Personal Ac
 
 You can also enter your Personal Access Token as you publish with an optional parameter `-p <token>`.
 
-```
+```bash
 vsce publish -p <token>
 ```

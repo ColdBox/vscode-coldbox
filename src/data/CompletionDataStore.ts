@@ -1,236 +1,10 @@
-export interface CompletionInfo {
-	trigger:	string;
-	doc?:		string;
-	snippet:	string;
-}
+export interface CompletionInfo { trigger: string;
+ doc?: string;
+ snippet: string;
+ }
 
-export class CompletionDataStore { static completions: { [ key: string ]: CompletionInfo[] } = {
+export class CompletionDataStore { static completions: { [key: string]: CompletionInfo[] } = {
 	"all": [
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "addAssertions",
-			"snippet": "addAssertions( assertions=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "addMatchers",
-			"snippet": "addMatchers( matchers=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "afterEach",
-			"snippet": "afterEach( body=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "aroundEach",
-			"snippet": "aroundEach( body=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "aroundStub",
-			"snippet": "aroundStub( spec=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "assert",
-			"snippet": "assert( expression=${1:any}, message=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "beforeEach",
-			"snippet": "beforeEach( body=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "clearDebugBuffer",
-			"snippet": "clearDebugBuffer()"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "closureStub",
-			"snippet": "closureStub()"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "console",
-			"snippet": "console( var=${1:any}, top=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "createEmptyMock",
-			"snippet": "createEmptyMock( className=\"${1:}\", object=${2:any}, callLogging=${3:true,false} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "createMock",
-			"snippet": "createMock( className=\"${1:}\", object=${2:any}, clearMethods=${3:true,false} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "createStub",
-			"snippet": "createStub( callLogging=${1:true,false}, extends=\"${2:}\", implements=\"${3:}\" )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "debug",
-			"snippet": "debug( var=${1:any}, label=\"${2:}\", deepCopy=${3:true,false}, top=${4:numeric} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "describe",
-			"snippet": "describe( title=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "expect",
-			"snippet": "expect( actual=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "expectedException",
-			"snippet": "expectedException( type=${1:any}, regex=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "fail",
-			"snippet": "fail( message=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "feature",
-			"snippet": "feature( feature=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "generateAroundEachClosuresStack",
-			"snippet": "generateAroundEachClosuresStack( closures=${1:[]}, suite=${2:any}, spec=${3:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "getDebugBuffer",
-			"snippet": "getDebugBuffer()"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "getMockBox",
-			"snippet": "getMockBox( generationPath=\"${1:}\" )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "getProperty",
-			"snippet": "getProperty( target=${1:any}, name=${2:any}, scope=${3:any}, defaultValue=${4:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "given",
-			"snippet": "given( given=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "hasExpectedException",
-			"snippet": "hasExpectedException( specName=${1:any}, runner=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "isExpectedException",
-			"snippet": "isExpectedException( exception=${1:any}, specName=${2:any}, runner=${3:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "it",
-			"snippet": "it( title=\"${1:}\", body=${2:any}, labels=${3:any}, skip=${4:any}, data=${5:{}} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "makePublic",
-			"snippet": "makePublic( target=${1:any}, method=\"${2:}\", newName=\"${3:}\" )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "prepareMock",
-			"snippet": "prepareMock( object=${1:any}, callLogging=${2:true,false} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "print",
-			"snippet": "print( message=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "println",
-			"snippet": "println( message=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "querySim",
-			"snippet": "querySim( queryData=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runAfterEachClosures",
-			"snippet": "runAfterEachClosures( suite=${1:any}, spec=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runAroundEachClosures",
-			"snippet": "runAroundEachClosures( suite=${1:any}, spec=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runBeforeEachClosures",
-			"snippet": "runBeforeEachClosures( suite=${1:any}, spec=${2:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runRemote",
-			"snippet": "runRemote( testSpecs=\"${1:}\", testSuites=\"${2:}\", reporter=\"${3:}\", labels=\"${4:}\" )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runSpec",
-			"snippet": "runSpec( spec=${1:any}, suite=${2:any}, testResults=${3:any}, suiteStats=${4:any}, runner=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "runTestMethod",
-			"snippet": "runTestMethod( spec=${1:any}, testResults=${2:any}, suiteStats=${3:any}, runner=${4:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "scenario",
-			"snippet": "scenario( scenario=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "sliceTagContext",
-			"snippet": "sliceTagContext( tagContext=${1:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "story",
-			"snippet": "story( story=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "then",
-			"snippet": "then( then=\"${1:}\", body=${2:any}, labels=${3:any}, skip=${4:any}, data=${5:{}} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "when",
-			"snippet": "when( when=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false}, skip=${5:any} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "xdescribe",
-			"snippet": "xdescribe( title=\"${1:}\", body=${2:any}, labels=${3:any}, asyncAll=${4:true,false} )"
-		},
-		{
-			"doc": "(ColdBox BaseSpec)",
-			"trigger": "xit",
-			"snippet": "xit( title=\"${1:}\", body=${2:any}, labels=${3:any}, data=${4:{}} )"
-		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "appendToBuffer",
@@ -239,47 +13,47 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "clearBuffer",
-			"snippet": "clearBuffer()"
+			"snippet": "clearBuffer( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getBufferObject",
-			"snippet": "getBufferObject()"
+			"snippet": "getBufferObject( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getBufferString",
-			"snippet": "getBufferString()"
+			"snippet": "getBufferString( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getCachebox",
-			"snippet": "getCachebox()"
+			"snippet": "getCachebox( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getFlash",
-			"snippet": "getFlash()"
+			"snippet": "getFlash( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getInterceptorService",
-			"snippet": "getInterceptorService()"
+			"snippet": "getInterceptorService( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getLog",
-			"snippet": "getLog()"
+			"snippet": "getLog( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getLogBox",
-			"snippet": "getLogBox()"
+			"snippet": "getLogBox( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getProperties",
-			"snippet": "getProperties()"
+			"snippet": "getProperties( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
@@ -289,7 +63,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(ColdBox Interceptor)",
 			"trigger": "getWirebox",
-			"snippet": "getWirebox()"
+			"snippet": "getWirebox( )"
 		},
 		{
 			"doc": "(ColdBox Interceptor)",
@@ -353,18 +127,23 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
+			"trigger": "async",
+			"snippet": "async( )"
+		},
+		{
+			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "getCache",
 			"snippet": "getCache( name=${1:any} )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "getController",
-			"snippet": "getController()"
+			"snippet": "getController( )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
-			"trigger": "getDatasource",
-			"snippet": "getDatasource( alias=${1:any} )"
+			"trigger": "getEnv",
+			"snippet": "getEnv( key=${1:any}, defaultValue=${2:any} )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
@@ -393,18 +172,8 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
-			"trigger": "getMyPlugin",
-			"snippet": "getMyPlugin()"
-		},
-		{
-			"doc": "(ColdBox FrameworkSuperType)",
-			"trigger": "getPlugin",
-			"snippet": "getPlugin()"
-		},
-		{
-			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "getRenderer",
-			"snippet": "getRenderer()"
+			"snippet": "getRenderer( )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
@@ -414,7 +183,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "getRequestContext",
-			"snippet": "getRequestContext()"
+			"snippet": "getRequestContext( )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
@@ -428,13 +197,23 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
+			"trigger": "getSystemProperty",
+			"snippet": "getSystemProperty( key=${1:any}, defaultValue=${2:any} )"
+		},
+		{
+			"doc": "(ColdBox FrameworkSuperType)",
+			"trigger": "getSystemSetting",
+			"snippet": "getSystemSetting( key=${1:any}, defaultValue=${2:any} )"
+		},
+		{
+			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "includeUDF",
 			"snippet": "includeUDF( udflibrary=${1:any} )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "loadApplicationHelpers",
-			"snippet": "loadApplicationHelpers()"
+			"snippet": "loadApplicationHelpers( )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
@@ -458,6 +237,11 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
+			"trigger": "relocate",
+			"snippet": "relocate( event=${1:any}, URL=${2:any}, URI=${3:any}, queryString=${4:any}, persist=${5:any}, persistStruct=${6:{}}, addToken=${7:true,false}, ssl=${8:true,false}, baseURL=${9:any}, postProcessExempt=${10:true,false}, statusCode=${11:numeric} )"
+		},
+		{
+			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "renderExternalView",
 			"snippet": "renderExternalView( view=${1:any}, args=${2:{}}, cache=${3:true,false}, cacheTimeout=${4:any}, cacheLastAccessTimeout=${5:any}, cacheSuffix=${6:any}, cacheProvider=${7:any} )"
 		},
@@ -469,12 +253,17 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "renderView",
-			"snippet": "renderView( view=${1:any}, args=${2:{}}, module=${3:any}, cache=${4:true,false}, cacheTimeout=${5:any}, cacheLastAccessTimeout=${6:any}, cacheSuffix=${7:any}, cacheProvider=${8:any}, collection=${9:any}, collectionAs=${10:any}, collectionStartRow=${11:numeric}, collectionMaxRows=${12:numeric}, collectionDelim=${13:any}, prePostExempt=${14:true,false} )"
+			"snippet": "renderView( view=${1:any}, args=${2:{}}, module=${3:any}, cache=${4:true,false}, cacheTimeout=${5:any}, cacheLastAccessTimeout=${6:any}, cacheSuffix=${7:any}, cacheProvider=${8:any}, collection=${9:any}, collectionAs=${10:any}, collectionStartRow=${11:numeric}, collectionMaxRows=${12:numeric}, collectionDelim=${13:any}, prePostExempt=${14:true,false}, name=${15:any} )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
 			"trigger": "runEvent",
 			"snippet": "runEvent( event=${1:any}, prePostExempt=${2:true,false}, private=${3:true,false}, defaultEvent=${4:true,false}, eventArguments=${5:{}}, cache=${6:true,false}, cacheTimeout=${7:any}, cacheLastAccessTimeout=${8:any}, cacheSuffix=${9:any}, cacheProvider=${10:any} )"
+		},
+		{
+			"doc": "(ColdBox FrameworkSuperType)",
+			"trigger": "runRoute",
+			"snippet": "runRoute( name=${1:any}, params=${2:{}}, cache=${3:true,false}, cacheTimeout=${4:any}, cacheLastAccessTimeout=${5:any}, cacheSuffix=${6:any}, cacheProvider=${7:any}, prePostExempt=${8:true,false} )"
 		},
 		{
 			"doc": "(ColdBox FrameworkSuperType)",
@@ -514,27 +303,27 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(ColdBox EventHandler)",
 			"trigger": "getCachebox",
-			"snippet": "getCachebox()"
+			"snippet": "getCachebox( )"
 		},
 		{
 			"doc": "(ColdBox EventHandler)",
 			"trigger": "getFlash",
-			"snippet": "getFlash()"
+			"snippet": "getFlash( )"
 		},
 		{
 			"doc": "(ColdBox EventHandler)",
 			"trigger": "getLog",
-			"snippet": "getLog()"
+			"snippet": "getLog( )"
 		},
 		{
 			"doc": "(ColdBox EventHandler)",
 			"trigger": "getLogBox",
-			"snippet": "getLogBox()"
+			"snippet": "getLogBox( )"
 		},
 		{
 			"doc": "(ColdBox EventHandler)",
 			"trigger": "getWirebox",
-			"snippet": "getWirebox()"
+			"snippet": "getWirebox( )"
 		},
 		{
 			"doc": "(ColdBox EventHandler)",
@@ -581,32 +370,32 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "clearAll",
-			"snippet": "cachebox.clearAll()"
+			"snippet": "cachebox.clearAll( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "configureEventManager",
-			"snippet": "cachebox.configureEventManager()"
+			"snippet": "cachebox.configureEventManager( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "configureLogBox",
-			"snippet": "cachebox.configureLogBox( configPath=\"${1:}\" )"
+			"snippet": "cachebox.configureLogBox( configPath=${1:any} )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "createCache",
-			"snippet": "cachebox.createCache( name=${1:any}, provider=${2:any}, properties=${3:any} )"
+			"snippet": "cachebox.createCache( name=${1:any}, provider=${2:any}, properties=${3:{}} )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "doScopeRegistration",
-			"snippet": "cachebox.doScopeRegistration()"
+			"snippet": "cachebox.doScopeRegistration( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "expireAll",
-			"snippet": "cachebox.expireAll()"
+			"snippet": "cachebox.expireAll( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
@@ -616,67 +405,77 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getCacheNames",
-			"snippet": "cachebox.getCacheNames()"
+			"snippet": "cachebox.getCacheNames( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getCaches",
-			"snippet": "cachebox.getCaches()"
+			"snippet": "cachebox.getCaches( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getColdbox",
-			"snippet": "cachebox.getColdbox()"
+			"snippet": "cachebox.getColdbox( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getConfig",
-			"snippet": "cachebox.getConfig()"
+			"snippet": "cachebox.getConfig( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getDefaultCache",
-			"snippet": "cachebox.getDefaultCache()"
+			"snippet": "cachebox.getDefaultCache( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getEventManager",
-			"snippet": "cachebox.getEventManager()"
+			"snippet": "cachebox.getEventManager( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
-			"trigger": "getFactoryID",
-			"snippet": "cachebox.getFactoryID()"
+			"trigger": "getEventStates",
+			"snippet": "cachebox.getEventStates( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
-			"trigger": "getLogBox",
-			"snippet": "cachebox.getLogBox()"
+			"trigger": "getFactoryId",
+			"snippet": "cachebox.getFactoryId( )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "getLog",
+			"snippet": "cachebox.getLog( )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "getLogbox",
+			"snippet": "cachebox.getLogbox( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getScopeRegistration",
-			"snippet": "cachebox.getScopeRegistration()"
+			"snippet": "cachebox.getScopeRegistration( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getUtil",
-			"snippet": "cachebox.getUtil()"
+			"snippet": "cachebox.getUtil( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "getVersion",
-			"snippet": "cachebox.getVersion()"
+			"snippet": "cachebox.getVersion( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "isColdBoxLinked",
-			"snippet": "cachebox.isColdBoxLinked()"
+			"snippet": "cachebox.isColdBoxLinked( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "reapAll",
-			"snippet": "cachebox.reapAll()"
+			"snippet": "cachebox.reapAll( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
@@ -686,12 +485,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "registerListeners",
-			"snippet": "cachebox.registerListeners()"
+			"snippet": "cachebox.registerListeners( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "removeAll",
-			"snippet": "cachebox.removeAll()"
+			"snippet": "cachebox.removeAll( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
@@ -701,7 +500,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox cachebox)",
 			"trigger": "removeFromScope",
-			"snippet": "cachebox.removeFromScope()"
+			"snippet": "cachebox.removeFromScope( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
@@ -710,8 +509,53 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox cachebox)",
+			"trigger": "setCaches",
+			"snippet": "cachebox.setCaches( caches=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setColdbox",
+			"snippet": "cachebox.setColdbox( coldbox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setConfig",
+			"snippet": "cachebox.setConfig( config=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setEventManager",
+			"snippet": "cachebox.setEventManager( eventManager=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setEventStates",
+			"snippet": "cachebox.setEventStates( eventStates=${1:[]} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setFactoryId",
+			"snippet": "cachebox.setFactoryId( factoryId=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setLog",
+			"snippet": "cachebox.setLog( log=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setLogbox",
+			"snippet": "cachebox.setLogbox( logbox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
+			"trigger": "setVersion",
+			"snippet": "cachebox.setVersion( version=${1:any} )"
+		},
+		{
+			"doc": "(TestBox cachebox)",
 			"trigger": "shutdown",
-			"snippet": "cachebox.shutdown()"
+			"snippet": "cachebox.shutdown( )"
 		},
 		{
 			"doc": "(TestBox cachebox)",
@@ -722,23 +566,43 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 	"logbox": [
 		{
 			"doc": "(TestBox logbox)",
+			"trigger": "getAppenderRegistry",
+			"snippet": "logbox.getAppenderRegistry( )"
+		},
+		{
+			"doc": "(TestBox logbox)",
 			"trigger": "getAppendersMap",
 			"snippet": "logbox.getAppendersMap( appenders=${1:any} )"
 		},
 		{
 			"doc": "(TestBox logbox)",
+			"trigger": "getCategoryAppenders",
+			"snippet": "logbox.getCategoryAppenders( )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "getColdbox",
+			"snippet": "logbox.getColdbox( )"
+		},
+		{
+			"doc": "(TestBox logbox)",
 			"trigger": "getConfig",
-			"snippet": "logbox.getConfig()"
+			"snippet": "logbox.getConfig( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
 			"trigger": "getCurrentAppenders",
-			"snippet": "logbox.getCurrentAppenders()"
+			"snippet": "logbox.getCurrentAppenders( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
 			"trigger": "getCurrentLoggers",
-			"snippet": "logbox.getCurrentLoggers()"
+			"snippet": "logbox.getCurrentLoggers( )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "getLogBoxID",
+			"snippet": "logbox.getLogBoxID( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
@@ -747,18 +611,23 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox logbox)",
+			"trigger": "getLoggerRegistry",
+			"snippet": "logbox.getLoggerRegistry( )"
+		},
+		{
+			"doc": "(TestBox logbox)",
 			"trigger": "getRootLogger",
-			"snippet": "logbox.getRootLogger()"
+			"snippet": "logbox.getRootLogger( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
 			"trigger": "getUtil",
-			"snippet": "logbox.getUtil()"
+			"snippet": "logbox.getUtil( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
 			"trigger": "getVersion",
-			"snippet": "logbox.getVersion()"
+			"snippet": "logbox.getVersion( )"
 		},
 		{
 			"doc": "(TestBox logbox)",
@@ -768,19 +637,54 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox logbox)",
 			"trigger": "registerAppender",
-			"snippet": "logbox.registerAppender( name=${1:any}, class=${2:any}, properties=${3:any}, layout=${4:any}, levelMin=${5:any}, levelMax=${6:any} )"
+			"snippet": "logbox.registerAppender( name=${1:any}, class=${2:any}, properties=${3:{}}, layout=${4:any}, levelMin=${5:numeric}, levelMax=${6:numeric} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setAppenderRegistry",
+			"snippet": "logbox.setAppenderRegistry( appenderRegistry=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setCategoryAppenders",
+			"snippet": "logbox.setCategoryAppenders( categoryAppenders=${1:any} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setColdbox",
+			"snippet": "logbox.setColdbox( coldbox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setConfig",
+			"snippet": "logbox.setConfig( config=${1:any} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setLogBoxID",
+			"snippet": "logbox.setLogBoxID( logBoxID=${1:any} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setLoggerRegistry",
+			"snippet": "logbox.setLoggerRegistry( loggerRegistry=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox logbox)",
+			"trigger": "setVersion",
+			"snippet": "logbox.setVersion( version=${1:any} )"
 		}
 	],
 	"binder": [
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "asEagerInit",
-			"snippet": "binder.asEagerInit()"
+			"snippet": "binder.asEagerInit( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "asSingleton",
-			"snippet": "binder.asSingleton()"
+			"snippet": "binder.asSingleton( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -805,57 +709,57 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getAppMapping",
-			"snippet": "binder.getAppMapping()"
+			"snippet": "binder.getAppMapping( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getAspectBindings",
-			"snippet": "binder.getAspectBindings()"
+			"snippet": "binder.getAspectBindings( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getCacheBoxConfig",
-			"snippet": "binder.getCacheBoxConfig()"
+			"snippet": "binder.getCacheBoxConfig( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getColdBox",
-			"snippet": "binder.getColdBox()"
+			"snippet": "binder.getColdBox( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getCurrentMapping",
-			"snippet": "binder.getCurrentMapping()"
+			"snippet": "binder.getCurrentMapping( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getCustomDSL",
-			"snippet": "binder.getCustomDSL()"
+			"snippet": "binder.getCustomDSL( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getCustomScopes",
-			"snippet": "binder.getCustomScopes()"
+			"snippet": "binder.getCustomScopes( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getDefaults",
-			"snippet": "binder.getDefaults()"
+			"snippet": "binder.getDefaults( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getInjector",
-			"snippet": "binder.getInjector()"
+			"snippet": "binder.getInjector( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getListeners",
-			"snippet": "binder.getListeners()"
+			"snippet": "binder.getListeners( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getLogBoxConfig",
-			"snippet": "binder.getLogBoxConfig()"
+			"snippet": "binder.getLogBoxConfig( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -865,22 +769,27 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getMappings",
-			"snippet": "binder.getMappings()"
+			"snippet": "binder.getMappings( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getMemento",
-			"snippet": "binder.getMemento()"
+			"snippet": "binder.getMemento( )"
+		},
+		{
+			"doc": "(TestBox binder)",
+			"trigger": "getMetadataCache",
+			"snippet": "binder.getMetadataCache( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getParentInjector",
-			"snippet": "binder.getParentInjector()"
+			"snippet": "binder.getParentInjector( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getProperties",
-			"snippet": "binder.getProperties()"
+			"snippet": "binder.getProperties( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -890,17 +799,17 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getScanLocations",
-			"snippet": "binder.getScanLocations()"
+			"snippet": "binder.getScanLocations( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getScopeRegistration",
-			"snippet": "binder.getScopeRegistration()"
+			"snippet": "binder.getScopeRegistration( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "getStopRecursions",
-			"snippet": "binder.getStopRecursions()"
+			"snippet": "binder.getStopRecursions( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -915,7 +824,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "initWith",
-			"snippet": "binder.initWith()"
+			"snippet": "binder.initWith( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -925,7 +834,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "listener",
-			"snippet": "binder.listener( class=${1:any}, properties=${2:any}, name=${3:any} )"
+			"snippet": "binder.listener( class=${1:any}, properties=${2:any}, name=${3:any}, register=${4:any} )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -949,13 +858,13 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox binder)",
-			"trigger": "mapDirectory",
-			"snippet": "binder.mapDirectory( packagePath=${1:any}, include=${2:any}, exclude=${3:any}, influence=${4:any}, filter=${5:any}, namespace=${6:any}, prepend=${7:any} )"
+			"trigger": "mapDSL",
+			"snippet": "binder.mapDSL( namespace=${1:any}, path=${2:any} )"
 		},
 		{
 			"doc": "(TestBox binder)",
-			"trigger": "mapDSL",
-			"snippet": "binder.mapDSL( namespace=${1:any}, path=${2:any} )"
+			"trigger": "mapDirectory",
+			"snippet": "binder.mapDirectory( packagePath=${1:any}, include=${2:any}, exclude=${3:any}, influence=${4:any}, filter=${5:any}, namespace=${6:any}, prepend=${7:any}, process=${8:any} )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -964,18 +873,18 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox binder)",
-			"trigger": "mappingExists",
-			"snippet": "binder.mappingExists( name=${1:any} )"
-		},
-		{
-			"doc": "(TestBox binder)",
 			"trigger": "mapScope",
 			"snippet": "binder.mapScope( annotation=${1:any}, path=${2:any} )"
 		},
 		{
 			"doc": "(TestBox binder)",
+			"trigger": "mappingExists",
+			"snippet": "binder.mappingExists( name=${1:any} )"
+		},
+		{
+			"doc": "(TestBox binder)",
 			"trigger": "match",
-			"snippet": "binder.match()"
+			"snippet": "binder.match( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -990,17 +899,17 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "noAutowire",
-			"snippet": "binder.noAutowire()"
+			"snippet": "binder.noAutowire( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "noInit",
-			"snippet": "binder.noInit()"
+			"snippet": "binder.noInit( )"
 		},
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "notThreadSafe",
-			"snippet": "binder.notThreadSafe()"
+			"snippet": "binder.notThreadSafe( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -1019,8 +928,13 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox binder)",
+			"trigger": "process",
+			"snippet": "binder.process( )"
+		},
+		{
+			"doc": "(TestBox binder)",
 			"trigger": "processMappings",
-			"snippet": "binder.processMappings()"
+			"snippet": "binder.processMappings( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -1045,7 +959,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "reset",
-			"snippet": "binder.reset()"
+			"snippet": "binder.reset( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -1061,6 +975,11 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 			"doc": "(TestBox binder)",
 			"trigger": "setMapping",
 			"snippet": "binder.setMapping( name=${1:any}, mapping=${2:any} )"
+		},
+		{
+			"doc": "(TestBox binder)",
+			"trigger": "setMetadataCache",
+			"snippet": "binder.setMetadataCache( metadataCache=${1:any} )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -1085,7 +1004,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox binder)",
 			"trigger": "threadSafe",
-			"snippet": "binder.threadSafe()"
+			"snippet": "binder.threadSafe( )"
 		},
 		{
 			"doc": "(TestBox binder)",
@@ -1162,22 +1081,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox log)",
 			"trigger": "canDebug",
-			"snippet": "log.canDebug()"
+			"snippet": "log.canDebug( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "canError",
-			"snippet": "log.canError()"
+			"snippet": "log.canError( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "canFatal",
-			"snippet": "log.canFatal()"
+			"snippet": "log.canFatal( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "canInfo",
-			"snippet": "log.canInfo()"
+			"snippet": "log.canInfo( )"
 		},
 		{
 			"doc": "(TestBox log)",
@@ -1187,7 +1106,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox log)",
 			"trigger": "canWarn",
-			"snippet": "log.canWarn()"
+			"snippet": "log.canWarn( )"
 		},
 		{
 			"doc": "(TestBox log)",
@@ -1212,32 +1131,32 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox log)",
 			"trigger": "getAppenders",
-			"snippet": "log.getAppenders()"
+			"snippet": "log.getAppenders( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "getCategory",
-			"snippet": "log.getCategory()"
+			"snippet": "log.getCategory( )"
 		},
 		{
 			"doc": "(TestBox log)",
-			"trigger": "getlevelMax",
-			"snippet": "log.getlevelMax()"
+			"trigger": "getLevelMax",
+			"snippet": "log.getLevelMax( )"
 		},
 		{
 			"doc": "(TestBox log)",
-			"trigger": "getlevelMin",
-			"snippet": "log.getlevelMin()"
+			"trigger": "getLevelMin",
+			"snippet": "log.getLevelMin( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "getRootLogger",
-			"snippet": "log.getRootLogger()"
+			"snippet": "log.getRootLogger( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "hasAppenders",
-			"snippet": "log.hasAppenders()"
+			"snippet": "log.hasAppenders( )"
 		},
 		{
 			"doc": "(TestBox log)",
@@ -1252,12 +1171,17 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox log)",
 			"trigger": "removeAllAppenders",
-			"snippet": "log.removeAllAppenders()"
+			"snippet": "log.removeAllAppenders( )"
 		},
 		{
 			"doc": "(TestBox log)",
 			"trigger": "removeAppender",
 			"snippet": "log.removeAppender( name=${1:any} )"
+		},
+		{
+			"doc": "(TestBox log)",
+			"trigger": "setAppenders",
+			"snippet": "log.setAppenders( appenders=${1:{}} )"
 		},
 		{
 			"doc": "(TestBox log)",
@@ -1277,7 +1201,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox log)",
 			"trigger": "setRootLogger",
-			"snippet": "log.setRootLogger( RootLogger=${1:any} )"
+			"snippet": "log.setRootLogger( rootLogger=${1:any} )"
 		},
 		{
 			"doc": "(TestBox log)",
@@ -1287,217 +1211,222 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 	],
 	"assert": [
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "assert",
 			"snippet": "assert.assert( expression=${1:true,false}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "between",
 			"snippet": "assert.between( actual=${1:any}, min=${2:any}, max=${3:any}, message=${4:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "closeTo",
 			"snippet": "assert.closeTo( expected=${1:any}, actual=${2:any}, delta=${3:any}, datePart=${4:any}, message=${5:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "deepKey",
 			"snippet": "assert.deepKey( target=${1:{}}, key=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "equalize",
 			"snippet": "assert.equalize( expected=${1:any}, actual=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "fail",
-			"snippet": "assert.fail( message=${1:any} )"
+			"snippet": "assert.fail( message=${1:any}, detail=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "getIdentityHashCode",
 			"snippet": "assert.getIdentityHashCode( target=${1:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "getStringName",
 			"snippet": "assert.getStringName( obj=${1:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "getTargetLength",
 			"snippet": "assert.getTargetLength( target=${1:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "includes",
 			"snippet": "assert.includes( target=${1:any}, needle=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "includesWithCase",
 			"snippet": "assert.includesWithCase( target=${1:any}, needle=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "instanceOf",
 			"snippet": "assert.instanceOf( actual=${1:any}, typeName=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isEmpty",
 			"snippet": "assert.isEmpty( target=${1:any}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isEqual",
 			"snippet": "assert.isEqual( expected=${1:any}, actual=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isEqualWithCase",
 			"snippet": "assert.isEqualWithCase( expected=\"${1:}\", actual=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isFalse",
 			"snippet": "assert.isFalse( actual=${1:true,false}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isGT",
 			"snippet": "assert.isGT( actual=${1:any}, target=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isGTE",
 			"snippet": "assert.isGTE( actual=${1:any}, target=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isJSON",
 			"snippet": "assert.isJSON( actual=${1:any}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isLT",
 			"snippet": "assert.isLT( actual=${1:any}, target=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isLTE",
 			"snippet": "assert.isLTE( actual=${1:any}, target=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isNotEmpty",
 			"snippet": "assert.isNotEmpty( target=${1:any}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isNotEqual",
 			"snippet": "assert.isNotEqual( expected=${1:any}, actual=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isNotSameInstance",
 			"snippet": "assert.isNotSameInstance( expected=${1:any}, actual=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isSameInstance",
 			"snippet": "assert.isSameInstance( expected=${1:any}, actual=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "isTrue",
 			"snippet": "assert.isTrue( actual=${1:true,false}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "key",
 			"snippet": "assert.key( target=${1:any}, key=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "lengthOf",
 			"snippet": "assert.lengthOf( target=${1:any}, length=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "match",
 			"snippet": "assert.match( actual=\"${1:}\", regex=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "matchWithCase",
 			"snippet": "assert.matchWithCase( actual=\"${1:}\", regex=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notDeepKey",
 			"snippet": "assert.notDeepKey( target=${1:{}}, key=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notIncludes",
 			"snippet": "assert.notIncludes( target=${1:any}, needle=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notIncludesWithCase",
 			"snippet": "assert.notIncludesWithCase( target=${1:any}, needle=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notInstanceOf",
 			"snippet": "assert.notInstanceOf( actual=${1:any}, typeName=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notKey",
 			"snippet": "assert.notKey( target=${1:any}, key=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notLengthOf",
 			"snippet": "assert.notLengthOf( target=${1:any}, length=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notMatch",
 			"snippet": "assert.notMatch( actual=\"${1:}\", regex=\"${2:}\", message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
+			"trigger": "notMatchWithCase",
+			"snippet": "assert.notMatchWithCase( actual=\"${1:}\", regex=\"${2:}\", message=${3:any} )"
+		},
+		{
+			"doc": "(ColdBox assert)",
 			"trigger": "notNull",
 			"snippet": "assert.notNull( actual=${1:any}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notThrows",
 			"snippet": "assert.notThrows( target=${1:any}, type=${2:any}, regex=${3:any}, message=${4:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "notTypeOf",
 			"snippet": "assert.notTypeOf( type=\"${1:}\", actual=${2:any}, message=${3:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "null",
 			"snippet": "assert.null( actual=${1:any}, message=${2:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "throws",
 			"snippet": "assert.throws( target=${1:any}, type=${2:any}, regex=${3:any}, message=${4:any} )"
 		},
 		{
-			"doc": "(TestBox assert)",
+			"doc": "(ColdBox assert)",
 			"trigger": "typeOf",
 			"snippet": "assert.typeOf( type=\"${1:}\", actual=${2:any}, message=${3:any} )"
 		}
@@ -1506,7 +1435,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "autowire",
-			"snippet": "wirebox.autowire( target=${1:any}, mapping=${2:any}, targetID=${3:any}, annotationCheck=${4:any} )"
+			"snippet": "wirebox.autowire( target=${1:any}, mapping=${2:any}, targetID=${3:any}, annotationCheck=${4:true,false} )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1516,22 +1445,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "buildInstance",
-			"snippet": "wirebox.buildInstance( mapping=${1:any}, initArguments=${2:any} )"
+			"snippet": "wirebox.buildInstance( mapping=${1:any}, initArguments=${2:{}} )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "clearSingletons",
-			"snippet": "wirebox.clearSingletons()"
+			"snippet": "wirebox.clearSingletons( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "configureCacheBox",
-			"snippet": "wirebox.configureCacheBox( config=${1:any} )"
+			"snippet": "wirebox.configureCacheBox( config=${1:{}} )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "configureEventManager",
-			"snippet": "wirebox.configureEventManager()"
+			"snippet": "wirebox.configureEventManager( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1546,57 +1475,67 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "doScopeRegistration",
-			"snippet": "wirebox.doScopeRegistration()"
+			"snippet": "wirebox.doScopeRegistration( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getBinder",
-			"snippet": "wirebox.getBinder()"
-		},
-		{
-			"doc": "(TestBox wirebox)",
-			"trigger": "getBuilder",
-			"snippet": "wirebox.getBuilder()"
+			"snippet": "wirebox.getBinder( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getCacheBox",
-			"snippet": "wirebox.getCacheBox()"
+			"snippet": "wirebox.getCacheBox( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getColdbox",
-			"snippet": "wirebox.getColdbox()"
+			"snippet": "wirebox.getColdbox( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getEventManager",
-			"snippet": "wirebox.getEventManager()"
+			"snippet": "wirebox.getEventManager( )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "getEventStates",
+			"snippet": "wirebox.getEventStates( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getInjectorID",
-			"snippet": "wirebox.getInjectorID()"
+			"snippet": "wirebox.getInjectorID( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getInstance",
-			"snippet": "wirebox.getInstance( name=${1:any}, dsl=${2:any}, initArguments=${3:any}, targetObject=${4:any} )"
+			"snippet": "wirebox.getInstance( name=${1:any}, dsl=${2:any}, initArguments=${3:{}}, targetObject=${4:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "getJavaSystem",
+			"snippet": "wirebox.getJavaSystem( )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "getLog",
+			"snippet": "wirebox.getLog( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getLogBox",
-			"snippet": "wirebox.getLogBox()"
+			"snippet": "wirebox.getLogBox( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getObjectPopulator",
-			"snippet": "wirebox.getObjectPopulator()"
+			"snippet": "wirebox.getObjectPopulator( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getParent",
-			"snippet": "wirebox.getParent()"
+			"snippet": "wirebox.getParent( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1606,27 +1545,32 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getScopeRegistration",
-			"snippet": "wirebox.getScopeRegistration()"
-		},
-		{
-			"doc": "(TestBox wirebox)",
-			"trigger": "getScopes",
-			"snippet": "wirebox.getScopes()"
+			"snippet": "wirebox.getScopeRegistration( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getScopeStorage",
-			"snippet": "wirebox.getScopeStorage()"
+			"snippet": "wirebox.getScopeStorage( )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "getScopes",
+			"snippet": "wirebox.getScopes( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getUtil",
-			"snippet": "wirebox.getUtil()"
+			"snippet": "wirebox.getUtil( )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "getUtility",
+			"snippet": "wirebox.getUtility( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "getVersion",
-			"snippet": "wirebox.getVersion()"
+			"snippet": "wirebox.getVersion( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1636,12 +1580,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "isCacheBoxLinked",
-			"snippet": "wirebox.isCacheBoxLinked()"
+			"snippet": "wirebox.isCacheBoxLinked( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "isColdBoxLinked",
-			"snippet": "wirebox.isColdBoxLinked()"
+			"snippet": "wirebox.isColdBoxLinked( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1651,7 +1595,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "locateScopedSelf",
-			"snippet": "wirebox.locateScopedSelf()"
+			"snippet": "wirebox.locateScopedSelf( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1680,8 +1624,13 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox wirebox)",
+			"trigger": "registerListener",
+			"snippet": "wirebox.registerListener( listener=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
 			"trigger": "registerListeners",
-			"snippet": "wirebox.registerListeners()"
+			"snippet": "wirebox.registerListeners( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1691,12 +1640,57 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "registerScopes",
-			"snippet": "wirebox.registerScopes()"
+			"snippet": "wirebox.registerScopes( )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
 			"trigger": "removeFromScope",
-			"snippet": "wirebox.removeFromScope()"
+			"snippet": "wirebox.removeFromScope( )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setBinder",
+			"snippet": "wirebox.setBinder( binder=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setCacheBox",
+			"snippet": "wirebox.setCacheBox( cacheBox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setColdbox",
+			"snippet": "wirebox.setColdbox( coldbox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setEventManager",
+			"snippet": "wirebox.setEventManager( eventManager=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setEventStates",
+			"snippet": "wirebox.setEventStates( eventStates=${1:[]} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setInjectorID",
+			"snippet": "wirebox.setInjectorID( injectorID=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setJavaSystem",
+			"snippet": "wirebox.setJavaSystem( javaSystem=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setLog",
+			"snippet": "wirebox.setLog( log=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setLogBox",
+			"snippet": "wirebox.setLogBox( logBox=${1:any} )"
 		},
 		{
 			"doc": "(TestBox wirebox)",
@@ -1705,20 +1699,40 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox wirebox)",
+			"trigger": "setScopeStorage",
+			"snippet": "wirebox.setScopeStorage( scopeStorage=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setScopes",
+			"snippet": "wirebox.setScopes( scopes=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setUtility",
+			"snippet": "wirebox.setUtility( utility=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
+			"trigger": "setVersion",
+			"snippet": "wirebox.setVersion( version=${1:any} )"
+		},
+		{
+			"doc": "(TestBox wirebox)",
 			"trigger": "shutdown",
-			"snippet": "wirebox.shutdown()"
+			"snippet": "wirebox.shutdown( )"
 		}
 	],
 	"flash": [
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "clear",
-			"snippet": "flash.clear()"
+			"snippet": "flash.clear( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "clearFlash",
-			"snippet": "flash.clearFlash()"
+			"snippet": "flash.clearFlash( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1733,7 +1747,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "flashExists",
-			"snippet": "flash.flashExists()"
+			"snippet": "flash.flashExists( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1742,28 +1756,33 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox flash)",
+			"trigger": "getAll",
+			"snippet": "flash.getAll( )"
+		},
+		{
+			"doc": "(TestBox flash)",
 			"trigger": "getController",
-			"snippet": "flash.getController()"
+			"snippet": "flash.getController( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getDefaults",
-			"snippet": "flash.getDefaults()"
+			"snippet": "flash.getDefaults( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getFlash",
-			"snippet": "flash.getFlash()"
+			"snippet": "flash.getFlash( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getKeys",
-			"snippet": "flash.getKeys()"
+			"snippet": "flash.getKeys( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getProperties",
-			"snippet": "flash.getProperties()"
+			"snippet": "flash.getProperties( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1773,22 +1792,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getScope",
-			"snippet": "flash.getScope()"
+			"snippet": "flash.getScope( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "getUtil",
-			"snippet": "flash.getUtil()"
+			"snippet": "flash.getUtil( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "inflateFlash",
-			"snippet": "flash.inflateFlash()"
+			"snippet": "flash.inflateFlash( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "isEmpty",
-			"snippet": "flash.isEmpty()"
+			"snippet": "flash.isEmpty( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1823,12 +1842,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "removeFlash",
-			"snippet": "flash.removeFlash()"
+			"snippet": "flash.removeFlash( )"
 		},
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "saveFlash",
-			"snippet": "flash.saveFlash()"
+			"snippet": "flash.saveFlash( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1853,7 +1872,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox flash)",
 			"trigger": "size",
-			"snippet": "flash.size()"
+			"snippet": "flash.size( )"
 		},
 		{
 			"doc": "(TestBox flash)",
@@ -1865,7 +1884,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "buildLink",
-			"snippet": "event.buildLink( linkTo=${1:any}, translate=${2:true,false}, ssl=${3:true,false}, baseURL=${4:any}, queryString=${5:any} )"
+			"snippet": "event.buildLink( to=${1:any}, translate=${2:true,false}, ssl=${3:true,false}, baseURL=${4:any}, queryString=${5:any} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -1875,7 +1894,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "clearPrivateCollection",
-			"snippet": "event.clearPrivateCollection()"
+			"snippet": "event.clearPrivateCollection( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -1890,107 +1909,132 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getContext",
-			"snippet": "event.getContext()"
+			"snippet": "event.getContext( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getController",
-			"snippet": "event.getController()"
+			"snippet": "event.getController( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentAction",
-			"snippet": "event.getCurrentAction()"
+			"snippet": "event.getCurrentAction( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentEvent",
-			"snippet": "event.getCurrentEvent()"
+			"snippet": "event.getCurrentEvent( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentHandler",
-			"snippet": "event.getCurrentHandler()"
+			"snippet": "event.getCurrentHandler( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentLayout",
-			"snippet": "event.getCurrentLayout()"
+			"snippet": "event.getCurrentLayout( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentLayoutModule",
-			"snippet": "event.getCurrentLayoutModule()"
+			"snippet": "event.getCurrentLayoutModule( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentModule",
-			"snippet": "event.getCurrentModule()"
+			"snippet": "event.getCurrentModule( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentRoute",
-			"snippet": "event.getCurrentRoute()"
+			"snippet": "event.getCurrentRoute( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getCurrentRouteName",
+			"snippet": "event.getCurrentRouteName( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getCurrentRoutedModule",
+			"snippet": "event.getCurrentRoutedModule( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentRoutedNamespace",
-			"snippet": "event.getCurrentRoutedNamespace()"
+			"snippet": "event.getCurrentRoutedNamespace( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentRoutedURL",
-			"snippet": "event.getCurrentRoutedURL()"
+			"snippet": "event.getCurrentRoutedURL( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentView",
-			"snippet": "event.getCurrentView()"
+			"snippet": "event.getCurrentView( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentViewArgs",
-			"snippet": "event.getCurrentViewArgs()"
+			"snippet": "event.getCurrentViewArgs( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getCurrentViewModule",
-			"snippet": "event.getCurrentViewModule()"
+			"snippet": "event.getCurrentViewModule( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getDefaultLayout",
-			"snippet": "event.getDefaultLayout()"
+			"snippet": "event.getDefaultLayout( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getDefaultView",
-			"snippet": "event.getDefaultView()"
+			"snippet": "event.getDefaultView( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getEventCacheableEntry",
-			"snippet": "event.getEventCacheableEntry()"
+			"snippet": "event.getEventCacheableEntry( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getEventName",
-			"snippet": "event.getEventName()"
+			"snippet": "event.getEventName( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getExcept",
+			"snippet": "event.getExcept( keys=${1:any}, private=${2:true,false} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getFileMimeType",
+			"snippet": "event.getFileMimeType( extension=\"${1:}\" )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getFolderLayouts",
-			"snippet": "event.getFolderLayouts()"
+			"snippet": "event.getFolderLayouts( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getFullURL",
+			"snippet": "event.getFullURL( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getHTMLBaseURL",
-			"snippet": "event.getHTMLBaseURL()"
+			"snippet": "event.getHTMLBaseURL( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getHTTPBasicCredentials",
-			"snippet": "event.getHTTPBasicCredentials()"
+			"snippet": "event.getHTTPBasicCredentials( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2000,22 +2044,37 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getHTTPHeader",
-			"snippet": "event.getHTTPHeader( The header to get=${1:any}, defaultValue=${2:any} )"
+			"snippet": "event.getHTTPHeader( header=${1:any}, defaultValue=${2:any} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getHTTPMethod",
-			"snippet": "event.getHTTPMethod()"
+			"snippet": "event.getHTTPMethod( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getIsNoExecution",
+			"snippet": "event.getIsNoExecution( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getMemento",
-			"snippet": "event.getMemento()"
+			"snippet": "event.getMemento( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getModuleEntryPoint",
+			"snippet": "event.getModuleEntryPoint( module=${1:any} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getModuleRoot",
 			"snippet": "event.getModuleRoot( module=${1:any} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getOnly",
+			"snippet": "event.getOnly( keys=${1:any}, private=${2:true,false} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2025,12 +2084,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getPrivateContext",
-			"snippet": "event.getPrivateContext()"
+			"snippet": "event.getPrivateContext( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getPrivateExcept",
+			"snippet": "event.getPrivateExcept( keys=${1:any} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getPrivateOnly",
+			"snippet": "event.getPrivateOnly( keys=${1:any} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getPrivateSize",
-			"snippet": "event.getPrivateSize()"
+			"snippet": "event.getPrivateSize( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2045,32 +2114,47 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getProperties",
-			"snippet": "event.getProperties()"
+			"snippet": "event.getProperties( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getRegisteredLayouts",
-			"snippet": "event.getRegisteredLayouts()"
+			"snippet": "event.getRegisteredLayouts( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getRenderData",
-			"snippet": "event.getRenderData()"
+			"snippet": "event.getRenderData( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getRenderingRegions",
+			"snippet": "event.getRenderingRegions( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getResponseHeaders",
+			"snippet": "event.getResponseHeaders( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getRoutedStruct",
-			"snippet": "event.getRoutedStruct()"
-		},
-		{
-			"doc": "(TestBox event)",
-			"trigger": "getSelf",
-			"snippet": "event.getSelf()"
+			"snippet": "event.getRoutedStruct( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getSESBaseURL",
-			"snippet": "event.getSESBaseURL()"
+			"snippet": "event.getSESBaseURL( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getSESEnabled",
+			"snippet": "event.getSESEnabled( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "getSelf",
+			"snippet": "event.getSelf( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2090,67 +2174,62 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getViewCacheableEntry",
-			"snippet": "event.getViewCacheableEntry()"
+			"snippet": "event.getViewCacheableEntry( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "getViewLayouts",
-			"snippet": "event.getViewLayouts()"
+			"snippet": "event.getViewLayouts( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isAjax",
-			"snippet": "event.isAjax()"
+			"snippet": "event.isAjax( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isEventCacheable",
-			"snippet": "event.isEventCacheable()"
+			"snippet": "event.isEventCacheable( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isInvalidHTTPMethod",
-			"snippet": "event.isInvalidHTTPMethod()"
-		},
-		{
-			"doc": "(TestBox event)",
-			"trigger": "isNoExecution",
-			"snippet": "event.isNoExecution()"
+			"snippet": "event.isInvalidHTTPMethod( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isNoRender",
-			"snippet": "event.isNoRender()"
+			"snippet": "event.isNoRender( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isProxyRequest",
-			"snippet": "event.isProxyRequest()"
+			"snippet": "event.isProxyRequest( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isSES",
-			"snippet": "event.isSES()"
+			"snippet": "event.isSES( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isSSL",
-			"snippet": "event.isSSL()"
+			"snippet": "event.isSSL( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "isViewCacheable",
-			"snippet": "event.isViewCacheable()"
+			"snippet": "event.isViewCacheable( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "noExecution",
-			"snippet": "event.noExecution()"
+			"snippet": "event.noExecution( )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "noLayout",
-			"snippet": "event.noLayout()"
+			"snippet": "event.noLayout( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2185,7 +2264,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "removeEventCacheableEntry",
-			"snippet": "event.removeEventCacheableEntry()"
+			"snippet": "event.removeEventCacheableEntry( )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2200,12 +2279,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "renderData",
-			"snippet": "event.renderData( type=${1:any}, data=${2:any}, contentType=${3:any}, encoding=${4:any}, statusCode=${5:numeric}, statusText=${6:any}, location=${7:any}, jsonCallback=${8:any}, jsonQueryFormat=${9:any}, jsonAsText=${10:true,false}, xmlColumnList=${11:any}, xmlUseCDATA=${12:true,false}, xmlListDelimiter=${13:any}, xmlRootName=${14:any}, pdfArgs=${15:{}}, formats=${16:any}, formatsView=${17:any}, isBinary=${18:true,false} )"
+			"snippet": "event.renderData( type=${1:any}, data=${2:any}, contentType=${3:any}, encoding=${4:any}, statusCode=${5:numeric}, statusText=${6:any}, location=${7:any}, jsonCallback=${8:any}, jsonQueryFormat=${9:any}, jsonAsText=${10:true,false}, xmlColumnList=${11:any}, xmlUseCDATA=${12:true,false}, xmlListDelimiter=${13:any}, xmlRootName=${14:any}, pdfArgs=${15:{}}, formats=${16:any}, formatsView=${17:any}, formatsRedirect=${18:any}, isBinary=${19:true,false} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "renderWithFormats",
-			"snippet": "event.renderWithFormats()"
+			"snippet": "event.renderWithFormats( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "route",
+			"snippet": "event.route( name=${1:any}, params=${2:{}}, ssl=${3:true,false} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "sendFile",
+			"snippet": "event.sendFile( file=${1:any}, name=${2:any}, mimeType=${3:any}, disposition=${4:any}, abortAtEnd=${5:true,false}, extension=${6:any}, deleteFile=${7:true,false} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2234,6 +2323,16 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox event)",
+			"trigger": "setEventName",
+			"snippet": "event.setEventName( eventName=${1:any} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "setFolderLayouts",
+			"snippet": "event.setFolderLayouts( folderLayouts=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox event)",
 			"trigger": "setHTTPHeader",
 			"snippet": "event.setHTTPHeader( statusCode=${1:any}, statusText=${2:any}, name=${3:any}, value=${4:any} )"
 		},
@@ -2244,8 +2343,8 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox event)",
-			"trigger": "setIsSES",
-			"snippet": "event.setIsSES( isSES=${1:true,false} )"
+			"trigger": "setIsNoExecution",
+			"snippet": "event.setIsNoExecution( isNoExecution=${1:true,false} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2270,12 +2369,27 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox event)",
 			"trigger": "setProperties",
-			"snippet": "event.setProperties( properties=${1:any} )"
+			"snippet": "event.setProperties( properties=${1:{}} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "setProxyRequest",
-			"snippet": "event.setProxyRequest()"
+			"snippet": "event.setProxyRequest( )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "setRegisteredLayouts",
+			"snippet": "event.setRegisteredLayouts( registeredLayouts=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "setRenderingRegions",
+			"snippet": "event.setRenderingRegions( renderingRegions=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "setResponseHeaders",
+			"snippet": "event.setResponseHeaders( responseHeaders=${1:{}} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2289,18 +2403,28 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox event)",
+			"trigger": "setSESEnabled",
+			"snippet": "event.setSESEnabled( flag=${1:true,false} )"
+		},
+		{
+			"doc": "(TestBox event)",
 			"trigger": "setValue",
 			"snippet": "event.setValue( name=${1:any}, value=${2:any}, private=${3:true,false} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "setView",
-			"snippet": "event.setView( view=${1:any}, args=${2:{}}, layout=${3:any}, module=${4:any}, noLayout=${5:true,false}, cache=${6:true,false}, cacheTimeout=${7:any}, cacheLastAccessTimeout=${8:any}, cacheSuffix=${9:any}, cacheProvider=${10:any} )"
+			"snippet": "event.setView( view=${1:any}, args=${2:{}}, layout=${3:any}, module=${4:any}, noLayout=${5:true,false}, cache=${6:true,false}, cacheTimeout=${7:any}, cacheLastAccessTimeout=${8:any}, cacheSuffix=${9:any}, cacheProvider=${10:any}, name=${11:any} )"
 		},
 		{
 			"doc": "(TestBox event)",
 			"trigger": "setViewCacheableEntry",
 			"snippet": "event.setViewCacheableEntry( cacheEntry=${1:{}} )"
+		},
+		{
+			"doc": "(TestBox event)",
+			"trigger": "setViewLayouts",
+			"snippet": "event.setViewLayouts( viewLayouts=${1:{}} )"
 		},
 		{
 			"doc": "(TestBox event)",
@@ -2311,8 +2435,8 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 	"html": [
 		{
 			"doc": "(TestBox html)",
-			"trigger": "$htmlhead",
-			"snippet": "html.$htmlhead( content=\"${1:}\" )"
+			"trigger": "$htmlHead",
+			"snippet": "html.$htmlHead( content=${1:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2322,12 +2446,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "addJSContent",
-			"snippet": "html.addJSContent( content=${1:any}, addToHeader=${2:true,false} )"
+			"snippet": "html.addJSContent( content=${1:any}, sendToHeader=${2:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "addStyleContent",
-			"snippet": "html.addStyleContent( content=${1:any}, addToHeader=${2:true,false} )"
+			"snippet": "html.addStyleContent( content=${1:any}, sendToHeader=${2:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2342,12 +2466,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "audio",
-			"snippet": "html.audio( src=${1:any}, autoplay=${2:true,false}, controls=${3:true,false}, loop=${4:true,false}, preLoad=${5:true,false}, noBaseURL=${6:true,false}, name=\"${7:}\", data=${8:{}} )"
+			"snippet": "html.audio( src=${1:any}, autoplay=${2:true,false}, controls=${3:true,false}, loop=${4:true,false}, preload=${5:true,false}, noBaseURL=${6:true,false}, name=${7:any}, data=${8:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "autoDiscoveryLink",
-			"snippet": "html.autoDiscoveryLink( type=\"${1:}\", href=${2:any}, rel=${3:any}, title=${4:any}, data=${5:{}} )"
+			"snippet": "html.autoDiscoveryLink( type=${1:any}, href=${2:any}, rel=${3:any}, title=${4:any}, data=${5:{}} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2362,57 +2486,57 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "button",
-			"snippet": "html.button( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, type=\"${4:}\", wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", data=${9:{}}, labelClass=\"${10:}\" )"
+			"snippet": "html.button( name=${1:any}, value=${2:any}, disabled=${3:true,false}, type=${4:any}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "canvas",
-			"snippet": "html.canvas( id=\"${1:}\", width=\"${2:}\", height=\"${3:}\", data=${4:{}} )"
+			"snippet": "html.canvas( id=${1:any}, width=${2:any}, height=${3:any}, data=${4:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
-			"trigger": "checkBox",
-			"snippet": "html.checkBox( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, checked=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"trigger": "checkbox",
+			"snippet": "html.checkbox( name=${1:any}, value=${2:any}, disabled=${3:true,false}, checked=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "docType",
-			"snippet": "html.docType( type=\"${1:}\" )"
+			"snippet": "html.docType( type=${1:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "elixir",
-			"snippet": "html.elixir( fileName=\"${1:}\", buildDirectory=\"${2:}\", sendToHeader=${3:true,false}, async=${4:true,false}, defer=${5:true,false} )"
+			"snippet": "html.elixir( fileName=${1:any}, buildDirectory=${2:any}, sendToHeader=${3:true,false}, async=${4:true,false}, defer=${5:true,false}, version=${6:numeric}, manifestRoot=${7:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "elixirPath",
-			"snippet": "html.elixirPath( fileName=\"${1:}\", buildDirectory=\"${2:}\" )"
+			"snippet": "html.elixirPath( fileName=${1:any}, buildDirectory=${2:any}, useModuleRoot=${3:true,false}, version=${4:numeric}, manifestRoot=${5:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "emailField",
-			"snippet": "html.emailField( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, readonly=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"snippet": "html.emailField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
-			"trigger": "endFieldset",
-			"snippet": "html.endFieldset()"
+			"trigger": "endFieldSet",
+			"snippet": "html.endFieldSet( )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "endForm",
-			"snippet": "html.endForm()"
+			"snippet": "html.endForm( )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "entityFields",
-			"snippet": "html.entityFields( entity=${1:any}, groupWrapper=\"${2:}\", fieldwrapper=${3:any}, labelwrapper=${4:any}, labelClass=\"${5:}\", textareas=${6:any}, booleanSelect=${7:true,false}, showRelations=${8:true,false}, manytoone=${9:{}}, manytomany=${10:{}} )"
+			"snippet": "html.entityFields( entity=${1:any}, groupWrapper=${2:any}, groupWrapperAttrs=${3:{}}, fieldwrapper=${4:any}, fieldWrapperAttrs=${5:{}}, labelAttrs=${6:{}}, labelwrapper=${7:any}, labelWrapperAttrs=${8:{}}, labelClass=${9:any}, textareas=${10:any}, booleanSelect=${11:true,false}, showRelations=${12:true,false}, manytoone=${13:{}}, manytomany=${14:{}}, inputInsideLabel=${15:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "fileField",
-			"snippet": "html.fileField( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, readonly=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\" )"
+			"snippet": "html.fileField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2422,42 +2546,47 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "getColumnArray",
-			"snippet": "html.getColumnArray( qry=${1:query}, columnName=\"${2:}\" )"
+			"snippet": "html.getColumnArray( qry=${1:any}, columnName=${2:any} )"
+		},
+		{
+			"doc": "(TestBox html)",
+			"trigger": "getSettings",
+			"snippet": "html.getSettings( )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "heading",
-			"snippet": "html.heading( title=\"${1:}\", size=${2:numeric} )"
+			"snippet": "html.heading( content=${1:any}, size=${2:numeric} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "hiddenField",
-			"snippet": "html.hiddenField( name=\"${1:}\", value=\"${2:}\", wrapper=\"${3:}\", groupWrapper=\"${4:}\", label=\"${5:}\", labelwrapper=\"${6:}\", labelClass=\"${7:}\", bind=${8:any}, bindProperty=${9:any} )"
+			"snippet": "html.hiddenField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "href",
-			"snippet": "html.href( href=${1:any}, text=${2:any}, queryString=${3:any}, title=${4:any}, target=${5:any}, ssl=${6:true,false}, noBaseURL=${7:true,false}, data=${8:{}} )"
+			"snippet": "html.href( href=${1:any}, text=${2:any}, queryString=${3:any}, title=${4:any}, noBaseURL=${5:true,false}, data=${6:{}} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "imageButton",
-			"snippet": "html.imageButton( src=\"${1:}\", name=\"${2:}\", disabled=${3:true,false}, wrapper=\"${4:}\", groupWrapper=\"${5:}\", label=\"${6:}\", labelwrapper=\"${7:}\", labelClass=\"${8:}\" )"
+			"snippet": "html.imageButton( src=${1:any}, name=${2:any}, disabled=${3:true,false}, wrapper=${4:any}, wrapperAttrs=${5:{}}, groupWrapper=${6:any}, groupWrapperAttrs=${7:{}}, label=${8:any}, labelAttrs=${9:{}}, labelWrapper=${10:any}, labelWrapperAttrs=${11:{}}, labelClass=${12:any}, bind=${13:any}, bindProperty=${14:any}, data=${15:{}}, inputInsideLabel=${16:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "img",
-			"snippet": "html.img( src=${1:any}, alt=\"${2:}\", class=\"${3:}\", width=\"${4:}\", height=\"${5:}\", title=\"${6:}\", rel=\"${7:}\", name=\"${8:}\", noBaseURL=${9:true,false}, data=${10:{}} )"
+			"snippet": "html.img( src=${1:any}, alt=${2:any}, class=${3:any}, width=${4:any}, height=${5:any}, title=${6:any}, rel=${7:any}, name=${8:any}, noBaseURL=${9:true,false}, data=${10:{}} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "inputField",
-			"snippet": "html.inputField( type=\"${1:}\", name=\"${2:}\", value=\"${3:}\", disabled=${4:true,false}, checked=${5:true,false}, readonly=${6:true,false}, wrapper=\"${7:}\", groupWrapper=\"${8:}\", label=\"${9:}\", labelwrapper=\"${10:}\", labelClass=\"${11:}\", bind=${12:any}, bindProperty=${13:any}, data=${14:{}} )"
+			"snippet": "html.inputField( type=${1:any}, name=${2:any}, value=${3:any}, disabled=${4:true,false}, checked=${5:true,false}, readonly=${6:true,false}, wrapper=${7:any}, wrapperAttrs=${8:{}}, groupWrapper=${9:any}, groupWrapperAttrs=${10:{}}, label=${11:any}, labelAttrs=${12:{}}, labelWrapper=${13:any}, labelWrapperAttrs=${14:{}}, labelClass=${15:any}, bind=${16:any}, bindProperty=${17:any}, data=${18:{}}, inputInsideLabel=${19:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "label",
-			"snippet": "html.label( field=\"${1:}\", content=\"${2:}\", wrapper=\"${3:}\", data=${4:{}}, class=\"${5:}\" )"
+			"snippet": "html.label( field=${1:any}, content=${2:any}, labelAttrs=${3:{}}, wrapper=${4:any}, wrapperAttrs=${5:{}}, data=${6:{}}, class=${7:any}, labelMode=${8:numeric} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2472,7 +2601,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "meta",
-			"snippet": "html.meta( name=${1:any}, content=${2:any}, type=\"${3:}\", sendToHeader=${4:true,false}, property=${5:any} )"
+			"snippet": "html.meta( name=${1:any}, content=${2:any}, type=${3:any}, sendToHeader=${4:true,false}, property=${5:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2483,6 +2612,11 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 			"doc": "(TestBox html)",
 			"trigger": "normalizeID",
 			"snippet": "html.normalizeID( args=${1:any} )"
+		},
+		{
+			"doc": "(TestBox html)",
+			"trigger": "objectsToTable",
+			"snippet": "html.objectsToTable( data=${1:any}, includes=\"${2:}\", excludes=\"${3:}\", buffer=${4:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2502,17 +2636,17 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "passIncludeExclude",
-			"snippet": "html.passIncludeExclude( value=\"${1:}\", includes=\"${2:}\", excludes=\"${3:}\" )"
+			"snippet": "html.passIncludeExclude( value=${1:any}, includes=${2:any}, excludes=${3:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "passwordField",
-			"snippet": "html.passwordField( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, readonly=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"snippet": "html.passwordField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "prepareBaseLink",
-			"snippet": "html.prepareBaseLink( noBaseURL=${1:any}, src=${2:any} )"
+			"snippet": "html.prepareBaseLink( noBaseURL=${1:true,false}, src=${2:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2522,27 +2656,32 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "radioButton",
-			"snippet": "html.radioButton( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, checked=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"snippet": "html.radioButton( name=${1:any}, value=${2:any}, disabled=${3:true,false}, checked=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "resetButton",
-			"snippet": "html.resetButton( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, wrapper=\"${4:}\", groupWrapper=\"${5:}\", label=\"${6:}\", labelwrapper=\"${7:}\", labelClass=\"${8:}\" )"
+			"snippet": "html.resetButton( name=${1:any}, value=${2:any}, disabled=${3:true,false}, wrapper=${4:any}, wrapperAttrs=${5:{}}, groupWrapper=${6:any}, groupWrapperAttrs=${7:{}}, label=${8:any}, labelAttrs=${9:{}}, labelWrapper=${10:any}, labelWrapperAttrs=${11:{}}, labelClass=${12:any}, bind=${13:any}, bindProperty=${14:any}, data=${15:{}}, inputInsideLabel=${16:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "select",
-			"snippet": "html.select( name=\"${1:}\", options=${2:any}, column=\"${3:}\", nameColumn=\"${4:}\", selectedIndex=${5:numeric}, selectedValue=\"${6:}\", bind=${7:any}, bindProperty=${8:any}, disabled=${9:true,false}, multiple=${10:true,false}, wrapper=\"${11:}\", groupWrapper=\"${12:}\", label=\"${13:}\", labelwrapper=\"${14:}\", data=${15:{}}, labelClass=\"${16:}\" )"
+			"snippet": "html.select( name=${1:any}, options=${2:any}, column=${3:any}, nameColumn=${4:any}, selectedIndex=${5:any}, selectedValue=${6:any}, bind=${7:any}, bindProperty=${8:any}, disabled=${9:true,false}, multiple=${10:true,false}, wrapper=${11:any}, wrapperAttrs=${12:{}}, groupWrapper=${13:any}, groupWrapperAttrs=${14:{}}, label=${15:any}, labelAttrs=${16:{}}, labelwrapper=${17:any}, labelWrapperAttrs=${18:{}}, data=${19:{}}, labelClass=${20:any}, inputInsideLabel=${21:true,false} )"
+		},
+		{
+			"doc": "(TestBox html)",
+			"trigger": "setSettings",
+			"snippet": "html.setSettings( settings=${1:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "slugify",
-			"snippet": "html.slugify( str=\"${1:}\", maxLength=${2:numeric}, allow=\"${3:}\" )"
+			"snippet": "html.slugify( str=${1:any}, maxLength=${2:numeric}, allow=${3:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
-			"trigger": "startFieldset",
-			"snippet": "html.startFieldset( legend=\"${1:}\", data=${2:{}} )"
+			"trigger": "startFieldSet",
+			"snippet": "html.startFieldSet( legend=${1:any}, data=${2:{}} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2552,32 +2691,32 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox html)",
 			"trigger": "submitButton",
-			"snippet": "html.submitButton( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, wrapper=\"${4:}\", groupWrapper=\"${5:}\", label=\"${6:}\", labelwrapper=\"${7:}\", labelClass=\"${8:}\" )"
+			"snippet": "html.submitButton( name=${1:any}, value=${2:any}, disabled=${3:true,false}, wrapper=${4:any}, wrapperAttrs=${5:{}}, groupWrapper=${6:any}, groupWrapperAttrs=${7:{}}, label=${8:any}, labelAttrs=${9:{}}, labelWrapper=${10:any}, labelWrapperAttrs=${11:{}}, labelClass=${12:any}, bind=${13:any}, bindProperty=${14:any}, data=${15:{}}, inputInsideLabel=${16:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "table",
-			"snippet": "html.table( data=${1:any}, includes=\"${2:}\", excludes=\"${3:}\", name=\"${4:}\" )"
+			"snippet": "html.table( data=${1:any}, includes=${2:any}, excludes=${3:any}, name=${4:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "tag",
-			"snippet": "html.tag( tag=\"${1:}\", content=\"${2:}\", data=${3:{}} )"
+			"snippet": "html.tag( tag=${1:any}, content=${2:any}, data=${3:{}}, excludes=\"${4:}\" )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "textArea",
-			"snippet": "html.textArea( name=\"${1:}\", cols=${2:numeric}, rows=${3:numeric}, value=\"${4:}\", disabled=${5:true,false}, readonly=${6:true,false}, wrapper=\"${7:}\", groupWrapper=\"${8:}\", label=\"${9:}\", labelwrapper=\"${10:}\", labelClass=\"${11:}\", bind=${12:any}, bindProperty=${13:any}, data=${14:{}} )"
+			"snippet": "html.textArea( name=${1:any}, cols=${2:numeric}, rows=${3:numeric}, value=${4:any}, disabled=${5:true,false}, readonly=${6:true,false}, wrapper=${7:any}, wrapperAttrs=${8:{}}, groupWrapper=${9:any}, groupWrapperAttrs=${10:{}}, label=${11:any}, labelAttrs=${12:{}}, labelWrapper=${13:any}, labelWrapperAttrs=${14:{}}, labelClass=${15:any}, bind=${16:any}, bindProperty=${17:any}, data=${18:{}}, inputInsideLabel=${19:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "textField",
-			"snippet": "html.textField( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, readonly=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"snippet": "html.textField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
-			"trigger": "toHTMLList",
-			"snippet": "html.toHTMLList( tag=\"${1:}\", values=${2:any}, column=\"${3:}\", data=${4:{}} )"
+			"trigger": "toHtmlList",
+			"snippet": "html.toHtmlList( tag=${1:any}, values=${2:any}, column=${3:any}, data=${4:{}} )"
 		},
 		{
 			"doc": "(TestBox html)",
@@ -2586,18 +2725,18 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox html)",
-			"trigger": "urlfield",
-			"snippet": "html.urlfield( name=\"${1:}\", value=\"${2:}\", disabled=${3:true,false}, readonly=${4:true,false}, wrapper=\"${5:}\", groupWrapper=\"${6:}\", label=\"${7:}\", labelwrapper=\"${8:}\", labelClass=\"${9:}\", bind=${10:any}, bindProperty=${11:any} )"
+			"trigger": "urlField",
+			"snippet": "html.urlField( name=${1:any}, value=${2:any}, disabled=${3:true,false}, readonly=${4:true,false}, wrapper=${5:any}, wrapperAttrs=${6:{}}, groupWrapper=${7:any}, groupWrapperAttrs=${8:{}}, label=${9:any}, labelAttrs=${10:{}}, labelWrapper=${11:any}, labelWrapperAttrs=${12:{}}, labelClass=${13:any}, bind=${14:any}, bindProperty=${15:any}, data=${16:{}}, inputInsideLabel=${17:true,false} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "video",
-			"snippet": "html.video( src=${1:any}, width=\"${2:}\", height=\"${3:}\", poster=\"${4:}\", autoplay=${5:true,false}, controls=${6:true,false}, loop=${7:true,false}, preload=${8:true,false}, noBaseURL=${9:true,false}, name=\"${10:}\", data=${11:{}} )"
+			"snippet": "html.video( src=${1:any}, width=${2:any}, height=${3:any}, poster=${4:any}, autoplay=${5:true,false}, controls=${6:true,false}, loop=${7:true,false}, preload=${8:true,false}, noBaseURL=${9:true,false}, name=${10:any}, data=${11:any} )"
 		},
 		{
 			"doc": "(TestBox html)",
 			"trigger": "wrapTag",
-			"snippet": "html.wrapTag( buffer=${1:any}, tag=${2:any}, end=${3:any} )"
+			"snippet": "html.wrapTag( buffer=${1:any}, tag=${2:any}, end=${3:true,false}, attrs=${4:{}} )"
 		}
 	],
 	"controller": [
@@ -2609,17 +2748,22 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getAppHash",
-			"snippet": "controller.getAppHash()"
+			"snippet": "controller.getAppHash( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getAppKey",
-			"snippet": "controller.getAppKey()"
+			"snippet": "controller.getAppKey( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getAppRootPath",
-			"snippet": "controller.getAppRootPath()"
+			"snippet": "controller.getAppRootPath( )"
+		},
+		{
+			"doc": "(TestBox controller)",
+			"trigger": "getCFMLEngine",
+			"snippet": "controller.getCFMLEngine( )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2629,87 +2773,87 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getCachebox",
-			"snippet": "controller.getCachebox()"
-		},
-		{
-			"doc": "(TestBox controller)",
-			"trigger": "getCFMLEngine",
-			"snippet": "controller.getCFMLEngine()"
+			"snippet": "controller.getCachebox( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getColdboxInitiated",
-			"snippet": "controller.getColdboxInitiated()"
+			"snippet": "controller.getColdboxInitiated( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getColdboxSettings",
-			"snippet": "controller.getColdboxSettings()"
+			"snippet": "controller.getColdboxSettings( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getConfigSettings",
-			"snippet": "controller.getConfigSettings()"
+			"snippet": "controller.getConfigSettings( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getDataMarshaller",
-			"snippet": "controller.getDataMarshaller()"
+			"snippet": "controller.getDataMarshaller( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getHandlerService",
-			"snippet": "controller.getHandlerService()"
+			"snippet": "controller.getHandlerService( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getInterceptorService",
-			"snippet": "controller.getInterceptorService()"
+			"snippet": "controller.getInterceptorService( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getLoaderService",
-			"snippet": "controller.getLoaderService()"
+			"snippet": "controller.getLoaderService( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getLog",
-			"snippet": "controller.getLog()"
+			"snippet": "controller.getLog( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getLogbox",
-			"snippet": "controller.getLogbox()"
+			"snippet": "controller.getLogbox( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getMemento",
-			"snippet": "controller.getMemento()"
+			"snippet": "controller.getMemento( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getModuleService",
-			"snippet": "controller.getModuleService()"
+			"snippet": "controller.getModuleService( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getPlugin",
-			"snippet": "controller.getPlugin()"
+			"snippet": "controller.getPlugin( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getRenderer",
-			"snippet": "controller.getRenderer()"
+			"snippet": "controller.getRenderer( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getRequestService",
-			"snippet": "controller.getRequestService()"
+			"snippet": "controller.getRequestService( )"
+		},
+		{
+			"doc": "(TestBox controller)",
+			"trigger": "getRoutingService",
+			"snippet": "controller.getRoutingService( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getServices",
-			"snippet": "controller.getServices()"
+			"snippet": "controller.getServices( )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2724,12 +2868,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getUtil",
-			"snippet": "controller.getUtil()"
+			"snippet": "controller.getUtil( )"
 		},
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "getWirebox",
-			"snippet": "controller.getWirebox()"
+			"snippet": "controller.getWirebox( )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2739,7 +2883,7 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "loadColdBoxSettings",
-			"snippet": "controller.loadColdBoxSettings()"
+			"snippet": "controller.loadColdBoxSettings( )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2758,8 +2902,18 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox controller)",
+			"trigger": "relocate",
+			"snippet": "controller.relocate( event=${1:any}, queryString=${2:any}, addToken=${3:true,false}, persist=${4:any}, persistStruct=${5:{}}, baseURL=${6:any}, postProcessExempt=${7:true,false}, URL=${8:any}, URI=${9:any}, statusCode=${10:numeric} )"
+		},
+		{
+			"doc": "(TestBox controller)",
 			"trigger": "runEvent",
 			"snippet": "controller.runEvent( event=${1:any}, prePostExempt=${2:true,false}, private=${3:true,false}, defaultEvent=${4:true,false}, eventArguments=${5:{}}, cache=${6:true,false}, cacheTimeout=${7:any}, cacheLastAccessTimeout=${8:any}, cacheSuffix=${9:any}, cacheProvider=${10:any} )"
+		},
+		{
+			"doc": "(TestBox controller)",
+			"trigger": "runRoute",
+			"snippet": "controller.runRoute( name=${1:any}, params=${2:{}}, cache=${3:true,false}, cacheTimeout=${4:any}, cacheLastAccessTimeout=${5:any}, cacheSuffix=${6:any}, cacheProvider=${7:any}, prePostExempt=${8:true,false} )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2783,13 +2937,13 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox controller)",
-			"trigger": "setCachebox",
-			"snippet": "controller.setCachebox( cachebox=${1:any} )"
+			"trigger": "setCFMLEngine",
+			"snippet": "controller.setCFMLEngine( CFMLEngine=${1:any} )"
 		},
 		{
 			"doc": "(TestBox controller)",
-			"trigger": "setCFMLEngine",
-			"snippet": "controller.setCFMLEngine( CFMLEngine=${1:any} )"
+			"trigger": "setCachebox",
+			"snippet": "controller.setCachebox( cachebox=${1:any} )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2819,7 +2973,12 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		{
 			"doc": "(TestBox controller)",
 			"trigger": "setNextEvent",
-			"snippet": "controller.setNextEvent( event=${1:any}, queryString=${2:any}, addToken=${3:true,false}, persist=${4:any}, persistStruct=${5:{}}, baseURL=${6:any}, postProcessExempt=${7:true,false}, URL=${8:any}, URI=${9:any}, statusCode=${10:numeric} )"
+			"snippet": "controller.setNextEvent( event=${1:any}, URL=${2:any}, URI=${3:any}, queryString=${4:any}, persist=${5:any}, persistStruct=${6:{}}, addToken=${7:true,false}, ssl=${8:true,false}, baseURL=${9:any}, postProcessExempt=${10:true,false}, statusCode=${11:numeric} )"
+		},
+		{
+			"doc": "(TestBox controller)",
+			"trigger": "setRenderer",
+			"snippet": "controller.setRenderer( renderer=${1:any} )"
 		},
 		{
 			"doc": "(TestBox controller)",
@@ -2833,11 +2992,6 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 		},
 		{
 			"doc": "(TestBox controller)",
-			"trigger": "settingExists",
-			"snippet": "controller.settingExists( name=${1:any}, fwSetting=${2:true,false} )"
-		},
-		{
-			"doc": "(TestBox controller)",
 			"trigger": "setUtil",
 			"snippet": "controller.setUtil( util=${1:any} )"
 		},
@@ -2845,6 +2999,11 @@ export class CompletionDataStore { static completions: { [ key: string ]: Comple
 			"doc": "(TestBox controller)",
 			"trigger": "setWirebox",
 			"snippet": "controller.setWirebox( wirebox=${1:any} )"
+		},
+		{
+			"doc": "(TestBox controller)",
+			"trigger": "settingExists",
+			"snippet": "controller.settingExists( name=${1:any}, fwSetting=${2:true,false} )"
 		},
 		{
 			"doc": "(TestBox controller)",
