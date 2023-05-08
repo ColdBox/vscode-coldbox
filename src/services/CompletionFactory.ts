@@ -26,7 +26,7 @@ export class CompletionFactory {
 
     /**
      * Find the prefix o a line
-     * 
+     *
      * @param line A specified line from the document
      * @returns the prefix of the line
      */
@@ -34,7 +34,7 @@ export class CompletionFactory {
         // If the line is null it doesn't continue
         if ( line === null ){ return null; }
 
-        // Get the lower case line without spaces 
+        // Get the lower case line without spaces
         line = line.trim().toLocaleLowerCase();
 
         // If the line doesn't ends whit dot
@@ -54,15 +54,15 @@ export class CompletionFactory {
 
     /**
      * Get all the completions
-     * 
+     *
      * @returns An array of completion results
      */
     private getAllCompletions(): vscode.CompletionItem[] {
         let result = [];
-        
+
         for ( let key in CompletionDataStore.completions ) {
             let prefix: string = null;
-            
+
             if ( key !== 'all' ) {
                 result.push( this.createCompletionItem( key ) );
                 prefix = key;
@@ -85,7 +85,7 @@ export class CompletionFactory {
         let items   = CompletionDataStore.completions[ prefix ];
 
         for ( let item of items ) {
-            var completionItem = this.createCompletionItem( item, null, prefix );
+            let completionItem = this.createCompletionItem( item, null, prefix );
             result.push( completionItem );
         }
 
@@ -93,7 +93,7 @@ export class CompletionFactory {
     }
 
     private createCompletionItem(
-            data: CompletionInfo | string, 
+            data: CompletionInfo | string,
             prefix?: string,
             filterOutPrefix?: string ): vscode.CompletionItem {
 
