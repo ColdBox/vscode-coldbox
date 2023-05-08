@@ -44,13 +44,13 @@ Code completion for all major ColdBox + TestBox functions and scopes:
 
 - `action ➝` : Creates a handler action
 - `around` : Creates an *aroundHandler()* implicit action
-- `onerror ➝` : Creates an *onError()* implicit action 
+- `onerror ➝` : Creates an *onError()* implicit action
 - `onhttp ➝` : Creates an *onInvalidHTTPMethod()* implict action
-- `onma ➝` : Creates an *onMissingAction()* implicit action 
-- `postaction ➝` : Creates a *postXXX()* implicit action 
-- `post ➝` : Creates a *postHandler()* implicit action 
-- `preaction ➝` : Creates a *preXXX()* implicit action 
-- `pre ➝` : Creates a *preHandler()* implicit action 
+- `onma ➝` : Creates an *onMissingAction()* implicit action
+- `postaction ➝` : Creates a *postXXX()* implicit action
+- `post ➝` : Creates a *postHandler()* implicit action
+- `preaction ➝` : Creates a *preXXX()* implicit action
+- `pre ➝` : Creates a *preHandler()* implicit action
 
 ### ORM Code Snippets
 
@@ -78,4 +78,4 @@ Install the latest *vscode-coldbox* package from https://marketplace.visualstudi
 
 ## References
 
-- A ColdBox Platform Bundle v2.0.0 for Sublime Text 2/3 - https://github.com/lmajano/cbox-coldbox-sublime
+- A ColdBox Platform Bundle v2.0.0 for Sublime Text 2/3 - https://github.com/coldbox/coldbox-sublime

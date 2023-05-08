@@ -3,7 +3,7 @@ const path = require('path');
 const _ = require('lodash');
 
 // script configuration. make sure that you have correct path here.
-const SOURCE = path.resolve('./cbox-coldbox-sublime/completions/ColdBox.sublime-completions');
+const SOURCE = path.resolve('./coldbox-sublime/completions/ColdBox.sublime-completions');
 const DEST = path.resolve('./src/data/CompletionDataStore.ts');
 
 const parser = {
@@ -63,13 +63,13 @@ function main() {
             console.log(`Error: ${SOURCE} is not found`);
             process.exit(-1);
         }
-    
+
         fs.readFile(SOURCE, 'utf8', (e, data) => {
             if (e) {
                 console.log(e);
                 process.exit(-1);
             }
-    
+
             let obj = parser.parse(data);
             let dataSource = {};
             if (obj.completions) {
