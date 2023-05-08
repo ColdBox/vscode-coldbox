@@ -6,6 +6,7 @@ Get the latest Visual Studio Code from https://code.visualstudio.com/.
 
 - ColdBox 5.X.X
 - ColdBox 6.X.X
+- ColdBox 7.X.X
 
 ## Currently supported features
 
