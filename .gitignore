@@ -1,6 +1,18 @@
-out
+## Dependencies
 node_modules
-.vscode-test/
+
+## out and testing
+out
+dist/
+target/**
+
+## Logs + IDEs
 .vsix
 *.vsix
-target/**
+.vscode-test/
+.history/
+npm-debug.log
+
+## Mac
+.DS_Store
+Thumbs.db

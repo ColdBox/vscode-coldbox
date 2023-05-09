@@ -20,14 +20,7 @@ cp -v ./coldbox-sublime/snippets/testing/*.* ./target
 cp -v ./coldbox-sublime/snippets/wirebox/*.* ./target
 
 # Copy Skeletons
-cp -v ./coldbox-sublime/skeletons/CacheBox.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/Coldbox.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/box.json.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/handler.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/interceptor-point.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/interceptor.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/model.sublime-snippet ./target
-cp -v ./coldbox-sublime/skeletons/router.sublime-snippet ./target
+cp -Rv ./coldbox-sublime/skeletons/* ./target/
 
 # Convert Sublime Snippets to VS Code
 ./node_modules/.bin/snippetToVsCode -s ./target -o ./snippets/snippets.json

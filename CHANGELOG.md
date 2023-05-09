@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.1.0] - 2023-05-08
+### Added
 
 - ColdBox 7 Updates
 - New Github repo of sublime snippets
+- Linting and formatting updates
+- Updated sublime layout to vscode layout
+- Refactoring chores
 
 ## [1.0.2] - 2020-04-04
 

@@ -13,9 +13,9 @@ npm install -g vsce
 You can use vsce to easily package and publish your extensions:
 
 ```bash
-$ cd myExtension
-$ vsce package
-$ vsce publish
+cd myExtension
+vsce package
+vsce publish
 ```
 
 vsce can also search, retrieve metadata, and unpublish extensions. For a reference on all the available vsce commands, `run vsce --help`.

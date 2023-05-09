@@ -1,15 +1,22 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es6",
+		"target": "ES2021",
         "outDir": "out",
+		"rootDir": "src",
         "lib": [
-            "es2016"
+			"ES2021"
         ],
         "sourceMap": true,
-        "rootDir": "src",
-        "alwaysStrict": true
+        "alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"esModuleInterop": true
     },
+    "include": [
+		"./src/**/*.ts"
+	],
     "exclude": [
         "node_modules",
         ".vscode-test"
