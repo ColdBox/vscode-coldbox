@@ -5,6 +5,7 @@ node_modules
 out
 dist/
 target/**
+testapp/**
 
 ## Logs + IDEs
 .vsix
