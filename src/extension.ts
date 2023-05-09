@@ -37,4 +37,4 @@ export function activate( context: vscode.ExtensionContext ): void {
 	}
 }
 
-export function deactivate(): void {}
+export function deactivate(): void { /* TODO document why this function 'deactivate' is empty */ }

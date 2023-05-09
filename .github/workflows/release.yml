@@ -9,17 +9,17 @@ on:
         description: 'Publish to the VS Marketplace'
         type: boolean
         required: true
-        default: "true"
+        default: true
       publishOVSX:
         description: 'Publish to OpenVSX'
         type: boolean
         required: true
-        default: "true"
+        default: true
       publishGH:
         description: 'Publish to GitHub Releases'
         type: boolean
         required: true
-        default: "true"
+        default: true
 
 jobs:
   package:
