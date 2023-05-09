@@ -5,72 +5,103 @@ module.exports = {
 		"node"   : true
 	},
 	"parser"        : "@typescript-eslint/parser",
-	"parserOptions" : {
-		"sourceType" : "module"
-	},
-	"plugins" : [
+	"parserOptions" : { "sourceType": "module" },
+	"plugins"       : [
 		"jsdoc",
 		"@typescript-eslint"
 	],
 	"rules" : {
-		"array-bracket-spacing": ["error", "always", {
-			"singleValue": true,
-			"arraysInArrays": true,
-			"objectsInArrays": true
-		}],
-		"array-bracket-newline" : [ "error", {
-			"multiline" : true
-		} ],
-		"array-element-newline" : [ "error",
+		"array-bracket-spacing" : [
+			"error",
+			"always",
+			{
+				"singleValue"     : true,
+				"arraysInArrays"  : true,
+				"objectsInArrays" : true
+			}
+		],
+		"array-bracket-newline" : [
+			"error",
+			{ "multiline": true }
+		],
+		"array-element-newline" : [
+			"error",
 			{ "multiline": true, "minItems": 2 }
 		],
-		"camelcase" : [ "error" , {
-			"properties" : "always"
-		}],
-		"indent": ["error", "tab", {
-			ignoredNodes: ["TemplateLiteral"]
-		}],
-		"keyword-spacing": ["error", { "after": true, "before": true }],
-		"key-spacing": ["error", {
-			"singleLine": {
-				"beforeColon": false,
-				"afterColon": true
-			},
-			"multiLine": {
-				"beforeColon": true,
-				"afterColon": true,
-				"align": "colon"
+		"camelcase" : [
+			"error" ,
+			{ "properties": "always" }
+		],
+		"indent" : [
+			"error",
+			"tab",
+			{ ignoredNodes: [ "TemplateLiteral" ] }
+		],
+		"keyword-spacing" : [
+			"error",
+			{ "after": true, "before": true }
+		],
+		"key-spacing" : [
+			"error",
+			{
+				"singleLine" : {
+					"beforeColon" : false,
+					"afterColon"  : true
+				},
+				"multiLine" : {
+					"beforeColon" : true,
+					"afterColon"  : true,
+					"align"       : "colon"
+				}
 			}
-		}],
-		"no-trailing-spaces": ["error", {
-			"skipBlankLines": false,
-			"ignoreComments": false
-		}],
-		"no-fallthrough" : "error",
-        "object-curly-newline" : [ "error", { "multiline" : true } ],
-		"object-curly-spacing": ["error", "always", {
-			"objectsInObjects": true,
-			"arraysInObjects": true
-		}],
-		"object-property-newline" : [ "error", { "allowAllPropertiesOnSameLine" : true } ],
-		"prefer-promise-reject-errors": "off",
-		"semi": ["error", "always"],
-		"space-in-parens": ["error", "always"],
-		"space-before-function-paren": ["error", {
-			"anonymous": "never",
-			"named": "never",
-			"asyncArrow": "never"
-		}],
-
-		"curly"  : "error",
-		"eqeqeq" : [
+		],
+		"no-trailing-spaces" : [
+			"error",
+			{
+				"skipBlankLines" : false,
+				"ignoreComments" : false
+			}
+		],
+		"no-fallthrough"       : "error",
+		"object-curly-newline" : [
+			"error",
+			{ "multiline": true }
+		],
+		"object-curly-spacing" : [
+			"error",
+			"always",
+			{
+				"objectsInObjects" : true,
+				"arraysInObjects"  : true
+			}
+		],
+		"object-property-newline" : [
+			"error",
+			{ "allowAllPropertiesOnSameLine": true }
+		],
+		"prefer-promise-reject-errors" : "off",
+		"semi"                         : [
 			"error",
 			"always"
 		],
-		"new-parens"         : "error",
-		"no-redeclare"       : "error",
-		"no-unused-expressions" : "warn",
-		"no-var"                : "error",
+		"space-in-parens" : [
+			"error",
+			"always"
+		],
+		"space-before-function-paren" : [
+			"error",
+			{
+				"anonymous"  : "never",
+				"named"      : "never",
+				"asyncArrow" : "never"
+			}
+		],
+
+		"curly"                        : "error",
+		"new-parens"                   : "error",
+		"no-redeclare"                 : "error",
+		"no-unused-expressions"        : "warn",
+		"no-var"                       : "error",
 		"prefer-arrow-callback"        : "error",
 		"prefer-const"                 : "warn",
 		"prefer-promise-reject-errors" : "off",
@@ -91,10 +122,22 @@ module.exports = {
 		"@typescript-eslint/array-type"                    : "error",
 		"@typescript-eslint/ban-types"                     : "error",
 		"@typescript-eslint/consistent-type-assertions"    : "error",
-		"@typescript-eslint/explicit-function-return-type" : "error",
+		"@typescript-eslint/explicit-function-return-type" : "off",
 		"@typescript-eslint/member-delimiter-style"        : "error",
 		"@typescript-eslint/no-empty-interface"            : "error",
 		"@typescript-eslint/no-inferrable-types"           : "error",
 		"@typescript-eslint/prefer-for-of"                 : "error"
-	}
+	},
+	"overrides" : [
+		{
+			// enable the rule specifically for TypeScript files
+			"files" : [
+				"*.ts",
+				"*.mts",
+				"*.cts",
+				"*.tsx"
+			],
+			"rules" : { "@typescript-eslint/explicit-function-return-type": "error" }
+		}
+	]
 };
