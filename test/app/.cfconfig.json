@@ -1,0 +1,40 @@
+{
+	"cacheDefaultObject":"coldbox",
+    "debuggingEnabled":true,
+    "debuggingReportExecutionTimes":false,
+    "disableInternalCFJavaComponents":false,
+	"requestTimeoutEnabled":true,
+	"requestTimeout":"0,0,5,0",
+	"robustExceptionEnabled":true,
+    "caches":{
+		"coldbox":{
+			"storage":"true",
+            "type":"RAM",
+            "custom":{
+				"timeToIdleSeconds":"1800",
+                "timeToLiveSeconds":"3600"
+            },
+            "class":"lucee.runtime.cache.ram.RamCache",
+            "readOnly":"false"
+        }
+    },
+	"datasources" : {
+		"${DB_DATABASE}":{
+			"bundleName": "${DB_BUNDLENAME}",
+			"bundleVersion": "${DB_BUNDLEVERSION}",
+			"class":"${DB_CLASS}",
+			"connectionLimit":"100",
+			"connectionTimeout":"1",
+			"custom":"useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC&useLegacyDatetimeCode=true&autoReconnect=true&useSSL=false",
+			"database":"${DB_DATABASE}",
+			"dbdriver":"${DB_DRIVER:MySQL}",
+			"dsn":"jdbc:mysql://{host}:{port}/{database}",
+			"host":"${DB_HOST:127.0.0.1}",
+			"password":"${DB_PASSWORD}",
+			"port":"${DB_PORT:3306}",
+			"username":"${DB_USER:root}",
+			"storage":"false"
+		}
+	},
+	"whitespaceManagement":"white-space-pref"
+}

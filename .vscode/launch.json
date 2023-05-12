@@ -7,10 +7,14 @@
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["--extensionDevelopmentPath=${workspaceFolder}" ],
-            "stopOnEntry": false,
+            "args": [
+                "${workspaceFolder}/test/app",
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
             "sourceMaps": true,
-            "outFiles": [ "${workspaceFolder}/out/**/*.js" ],
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
             "smartStep": true,
             "preLaunchTask": "npm: watch"
         },
@@ -19,11 +23,15 @@
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["--extensionDevelopmentPath=${workspaceFolder}", "--extensionTestsPath=${workspaceFolder}/out/test" ],
-            "stopOnEntry": false,
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionTestsPath=${workspaceFolder}/out/test"
+            ],
             "sourceMaps": true,
-            "outFiles": [ "${workspaceFolder}/out/test/**/*.js" ],
-             "smartStep": true,
+            "outFiles": [
+                "${workspaceFolder}/out/test/**/*.js"
+            ],
+            "smartStep": true,
             "preLaunchTask": "npm: watch"
         }
     ]

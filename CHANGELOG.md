@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Linting and formatting updates
 - Updated sublime layout to vscode layout
 - Refactoring chores
+- CI Updates to publish to marketplace
+- Test application and configuration for testing snippets
 
 ## [1.0.2] - 2020-04-04
 

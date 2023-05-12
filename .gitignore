@@ -5,7 +5,10 @@ node_modules
 out
 dist/
 target/**
-testapp/**
+test/app/.env
+test/app/coldbox/**
+test/app/modules/**
+test/app/testbox/**
 
 ## Logs + IDEs
 .vsix
