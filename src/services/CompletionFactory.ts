@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import * as _ from "lodash";
+import _ from "lodash";
 import { CompletionDataStore, CompletionInfo } from "../data/CompletionDataStore";
 
 export class CompletionFactory {
