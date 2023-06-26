@@ -12,7 +12,6 @@ build/**
 tsconfig.json
 vsc-extension-quickstart.md
 build.sh
-node_modules/**
 **/*.map
 **/tsconfig.json
 **/.gitignore

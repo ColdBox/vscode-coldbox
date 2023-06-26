@@ -92,8 +92,11 @@
         "sublime:convert": "bash ./build.sh"
     },
     "dependencies": {
-        "convert-snippets-to-vscode": "^1.0.2",
-        "lodash": "^4.17.21"
+        "lodash.endswith": "^4.2.1",
+        "lodash.has": "^4.5.2",
+        "lodash.isempty": "^4.4.0",
+        "lodash.keys": "^4.2.0",
+        "lodash.startswith": "^4.2.1"
     },
     "devDependencies": {
         "@types/glob": "^8.1.0",
@@ -103,6 +106,7 @@
         "@typescript-eslint/eslint-plugin": "^5.38.1",
         "@typescript-eslint/parser": "^5.38.1",
         "@vscode/vsce": "^2.19.0",
+        "convert-snippets-to-vscode": "^1.0.2",
         "eslint": "^8.24.0",
         "eslint-plugin-jsdoc": "^39.3.6",
         "glob": "^10.2.2",

@@ -1,9 +1,13 @@
 import * as vscode from "vscode";
-import * as _ from "lodash";
+import has from "lodash.has";
+import keys from "lodash.keys";
+import endsWith from "lodash.endswith";
+import startsWith from "lodash.startswith";
+import isEmpty from "lodash.isempty";
 import { CompletionDataStore, CompletionInfo } from "../data/CompletionDataStore";
 
 export class CompletionFactory {
-	private static prefixes = _.keys( CompletionDataStore.completions )
+	private static prefixes = keys( CompletionDataStore.completions )
 		.filter( ( value: string ) => {
 			return value !== "all";
 		}
@@ -38,14 +42,14 @@ export class CompletionFactory {
 		line = line.trim().toLocaleLowerCase();
 
 		// If the line doesn't ends whit dot
-		if ( !_.endsWith( line, "." ) ) { return null; }
+		if ( !endsWith( line, "." ) ) { return null; }
 
 		// Get the line from the first to the latest char
 		line = line.substr( 0, line.length - 1 );
 
 		// Search lines that ends with prefixes
 		for ( const prefix of CompletionFactory.prefixes ) {
-			if ( _.endsWith( line, prefix ) ) { return prefix; }
+			if ( endsWith( line, prefix ) ) { return prefix; }
 		}
 
 		// Defaults return null
@@ -79,7 +83,7 @@ export class CompletionFactory {
 	}
 
 	private getTargetCompletions( prefix: string ): vscode.CompletionItem[] {
-		if ( !_.has( CompletionDataStore.completions, prefix ) ) { return null; }
+		if ( !has( CompletionDataStore.completions, prefix ) ) { return null; }
 
 		const result  = [];
 		const items   = CompletionDataStore.completions[ prefix ];
@@ -98,24 +102,24 @@ export class CompletionFactory {
 		filterOutPrefix?: string ): vscode.CompletionItem {
 
 		if ( typeof data === "object" ) {
-			const trigger     = _.isEmpty( prefix ) ? data.trigger : `${prefix}.${data.trigger}`;
+			const trigger     = isEmpty( prefix ) ? data.trigger : `${prefix}.${data.trigger}`;
 			const item        = new vscode.CompletionItem( trigger, vscode.CompletionItemKind.Snippet );
 			let snippetSrc  = data.snippet;
 
-			if ( !_.isEmpty( filterOutPrefix ) && _.startsWith( snippetSrc, filterOutPrefix + "." ) ) {
+			if ( !isEmpty( filterOutPrefix ) && startsWith( snippetSrc, filterOutPrefix + "." ) ) {
 				snippetSrc = snippetSrc.substring( filterOutPrefix.length + 1 );
 			}
 
 			const snippet = new vscode.SnippetString( snippetSrc );
 			item.insertText = snippet;
 
-			if ( !_.isEmpty( data.doc ) ) { item.documentation = data.doc; }
+			if ( !isEmpty( data.doc ) ) { item.documentation = data.doc; }
 
 			return item;
 		}
 
 		else if ( typeof data === "string" ) {
-			const trigger = _.isEmpty( prefix ) ? data : `${prefix}.${data}`;
+			const trigger = isEmpty( prefix ) ? data : `${prefix}.${data}`;
 			const item    = new vscode.CompletionItem( trigger, vscode.CompletionItemKind.Text );
 			return item;
 		}
