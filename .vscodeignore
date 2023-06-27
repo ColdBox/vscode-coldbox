@@ -1,10 +1,8 @@
 .github/**
 .history/**
 .markdownlintrc
-.vscode/**
-.vscode-test/**
-out/test/**
-out/**/*.map
+.vscode
+out/
 src/**
 test/**
 build/**
@@ -19,3 +17,4 @@ node_modules/**
 **/.eslintignore
 **/.eslintrc.js
 webpack.config.js
+node_modules
