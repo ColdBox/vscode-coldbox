@@ -13,10 +13,9 @@ const SUPPORTED_LANGUAGES = [
  * @returns Boolean if is enabled or not
  */
 function isEnabled(): boolean {
-	let enabled: boolean;
 	const config = vscode.workspace.getConfiguration( "coldbox" );
 
-	enabled = ( config === null ) ? true : config.get( "autocomplete" );
+	const enabled: boolean = ( config === null ) ? true : config.get( "autocomplete" );
 
 	return enabled;
 }

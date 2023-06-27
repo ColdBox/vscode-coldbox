@@ -113,10 +113,14 @@ module.exports = {
 				"allowTemplateLiterals" : true
 			}
 		],
-		"spaced-comment"                                   : "error",
-		"jsdoc/check-alignment"                            : "error",
-		"jsdoc/check-indentation"                          : "error",
-		"jsdoc/newline-after-description"                  : "error",
+		"spaced-comment"          : "error",
+		"jsdoc/check-alignment"   : "error",
+		"jsdoc/check-indentation" : "error",
+		"jsdoc/tag-lines"         : [
+			"error",
+			"any",
+			{ "startLines": 1 }
+		],
 		"jsdoc/check-param-names"                          : "error",
 		"@typescript-eslint/adjacent-overload-signatures"  : "error",
 		"@typescript-eslint/array-type"                    : "error",
