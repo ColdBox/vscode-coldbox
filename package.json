@@ -65,6 +65,7 @@
                 "coldbox.extensions": {
                     "type": "array",
                     "default": [
+                        ".cfc",
                         ".cfm",
                         ".box.cfm"
                     ],
