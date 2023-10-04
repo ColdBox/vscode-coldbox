@@ -71,7 +71,8 @@
                     "type": "array",
                     "default": [
                         ".cfm",
-                        ".box.cfm"
+                        ".box.cfm",
+                        ".cfc"
                     ],
                     "items": {
                         "type": "string"
