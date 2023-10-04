@@ -29,7 +29,6 @@
         "HMVC"
     ],
     "activationEvents": [
-        "onLanguage:lang-cfml",
         "onLanguage:cfml",
         "workspaceContains:**/*.cfm",
         "workspaceContains:**/*.cfml",
@@ -37,10 +36,6 @@
     ],
     "contributes": {
         "snippets": [
-            {
-                "language": "lang-cfml",
-                "path": "./snippets/snippets.json"
-            },
             {
                 "language": "cfml",
                 "path": "./snippets/snippets.json"

@@ -2,10 +2,7 @@
 import * as vscode from "vscode";
 import { BoxCompletionProvider } from "./services/BoxCompletionProvider";
 
-const SUPPORTED_LANGUAGES = [
-	"lang-cfml",
-	"cfml"
-];
+const SUPPORTED_LANGUAGES = [ "cfml" ];
 
 /**
  * Verifies if ColdBox configuration is enabled
