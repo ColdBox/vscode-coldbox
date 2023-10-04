@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ----
 
-## [Unreleased]
+## [1.1.1]
+
+### Fixed
+
+- Added `.cfc` to coldbox extensions
+- Removed `lang-cfml` as an activated language, we only use `cfml` now.
+
+## [1.1.0]
 
 ### Added
 
